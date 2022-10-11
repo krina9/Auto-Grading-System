@@ -3,6 +3,8 @@ image: openjdk:17-oracle
 stages:
   - build
   - test
+  - deploy_to_dev
+  - deploy_to_test
   - deploy
 
 build:
@@ -20,13 +22,41 @@ test:
     - chmod +x ./mvnw
     - ./mvnw test
 
-deploy:
-  stage: deploy
+deploy_to_dev:
+  stage: deploy_to_dev
+  environment:
+    name: dev
   image: ruby:latest
   script:
     - apt update -qy
     - apt install -y ruby-dev
     - gem install dpl
-    - dpl --provider=heroku --app=$APP_NAME --api-key=$PRODUCTION_KEY
+    - dpl --provider=heroku --app=$APP_NAME_DEV --api-key=$HEROKU_KEY
   only:
-    - cicd
+    dev
+
+deploy_to_test:
+  stage: deploy_to_test
+  environment:
+    name: test
+  image: ruby:latest
+  script:
+    - apt update -qy
+    - apt install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=$APP_NAME_TEST --api-key=$HEROKU_KEY
+  only:
+    - test
+
+deploy:
+  stage: deploy
+  environment:
+    name: production
+  image: ruby:latest
+  script:
+    - apt update -qy
+    - apt install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=$APP_NAME --api-key=$HEROKU_KEY
+  only:
+    - main
