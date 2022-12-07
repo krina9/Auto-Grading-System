@@ -16,7 +16,9 @@ public class User {
     private Authority role;
     private Date registeredOn;
     private Boolean isActivated;
+    public User(){
 
+    }
     public User(UserDTO userDTO) {
         this.firstName = userDTO.getFirstName();
         this.lastName = userDTO.getLastName();
