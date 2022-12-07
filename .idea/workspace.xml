@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e97870-4fb1-49eb-82a6-8972f36d97c2" name="Changes" comment="Changed the content of CICD file" />
+    <list default="true" id="94e97870-4fb1-49eb-82a6-8972f36d97c2" name="Changes" comment="Changed the content of CICD file">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutoGrad.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Controllers/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CodeHat/CodeHatApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/AutoGradApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CodeHat/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/CodeHat/CodeHatApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/AutoGrad/AutoGradApplicationTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +58,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.general"
@@ -53,8 +66,9 @@
 }]]></component>
   <component name="RunManager">
     <configuration name="CodeHatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="group-10" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.CodeHat.CodeHatApplication" />
+      <option name="ACTIVE_PROFILES" />
+      <module name="AutoGrad" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.AutoGrad.AutoGradApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -69,6 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664829435520</updated>
       <workItem from="1664829440417" duration="3511000" />
+      <workItem from="1670428946658" duration="1385000" />
     </task>
     <task id="LOCAL-00001" summary="Created an empty project.">
       <created>1664830690896</created>
