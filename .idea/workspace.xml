@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e97870-4fb1-49eb-82a6-8972f36d97c2" name="Changes" comment="Changed the content of CICD file">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="94e97870-4fb1-49eb-82a6-8972f36d97c2" name="Changes" comment="Instructor first commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/AutoGrad/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/AutoGrad/Model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/AutoGrad/Services/Connection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/AutoGrad/Services/Connection.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,27 +50,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/MACS/Fall_22/Adv Soft Dev/Autograde/group-10/frontend/src/app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "bd46938a35253a75f9a69bcda9e45272",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/MACS/Fall_22/Adv Soft Dev/Autograde/group-10/frontend/src/app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;bd46938a35253a75f9a69bcda9e45272&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\MACS\Fall_22\Adv Soft Dev\Autograde\group-10\frontend\src\app" />
@@ -108,7 +111,8 @@
       <workItem from="1664829440417" duration="3511000" />
       <workItem from="1670428946658" duration="1385000" />
       <workItem from="1670454946296" duration="94000" />
-      <workItem from="1670455069947" duration="448000" />
+      <workItem from="1670455069947" duration="4839000" />
+      <workItem from="1670509258118" duration="3336000" />
     </task>
     <task id="LOCAL-00001" summary="Created an empty project.">
       <created>1664830690896</created>
@@ -138,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664832564216</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Instructor first commit">
+      <created>1670455670904</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670455670904</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +171,8 @@
     <MESSAGE value="Setting up CICD" />
     <MESSAGE value="Changed the name." />
     <MESSAGE value="Changed the content of CICD file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the content of CICD file" />
+    <MESSAGE value="Instructor first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Instructor first commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
