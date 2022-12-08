@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94e97870-4fb1-49eb-82a6-8972f36d97c2" name="Changes" comment="Changed the content of CICD file">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoGrad.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Controllers/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CodeHat/CodeHatApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/AutoGradApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CodeHat/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/CodeHat/CodeHatApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/AutoGrad/AutoGradApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Controllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Controllers/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Services/Impl/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Services/Impl/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/AutoGrad/Controllers/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/AutoGrad/Controllers/AuthenticationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/AutoGrad/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/AutoGrad/Model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/AutoGrad/Services/Connection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/AutoGrad/Services/Connection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/AutoGrad/Services/Impl/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/AutoGrad/Services/Impl/AuthenticationService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,12 +54,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/TRISHA/OneDrive/Desktop/group-10",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.general"
+    "settings.editor.selected.configurable": "preferences.general",
+    "spring.configuration.checksum": "bd46938a35253a75f9a69bcda9e45272"
   }
 }]]></component>
   <component name="RunManager">
@@ -84,6 +88,7 @@
       <updated>1664829435520</updated>
       <workItem from="1664829440417" duration="3511000" />
       <workItem from="1670428946658" duration="1385000" />
+      <workItem from="1670508740749" duration="1940000" />
     </task>
     <task id="LOCAL-00001" summary="Created an empty project.">
       <created>1664830690896</created>

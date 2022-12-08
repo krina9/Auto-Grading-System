@@ -17,6 +17,10 @@ public class User {
     private Date registeredOn;
     private Boolean isActivated;
 
+    public User() {
+
+    }
+
     public User(UserDTO userDTO) {
         this.firstName = userDTO.getFirstName();
         this.lastName = userDTO.getLastName();
