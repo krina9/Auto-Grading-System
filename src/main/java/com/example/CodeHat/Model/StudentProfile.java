@@ -1,19 +1,37 @@
 package com.example.CodeHat.Model;
 
-import com.example.CodeHat.Services.dto.StudentProfileDTO;
-
-import java.util.List;
-
 public class StudentProfile {
-
+    private String firstName;
+    private String lastName;
+    private String email;
     private int score;
     private int numberOfProblemSolved;
-    private List<String> coreSkills;
 
-    public StudentProfile(StudentProfileDTO studentProfileDTO) {
-        this.score = studentProfileDTO.getScore();
-        this.numberOfProblemSolved = studentProfileDTO.getNumberOfProblemSolved();
-        this.coreSkills = studentProfileDTO.getCoreSkills();
+    public StudentProfile(){
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public int getScore() {
@@ -32,11 +50,4 @@ public class StudentProfile {
         this.numberOfProblemSolved = numberOfProblemSolved;
     }
 
-    public List<String> getCoreSkills() {
-        return coreSkills;
-    }
-
-    public void setCoreSkills(List<String> coreSkills) {
-        this.coreSkills = coreSkills;
-    }
 }
