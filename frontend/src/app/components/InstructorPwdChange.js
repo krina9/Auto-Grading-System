@@ -27,6 +27,10 @@ class InstructorPwdChange extends React.Component {
         axios.post(backend_url+"/api/user/change-password",this.state).then(
             (response) => {
                 console.log(response);
+                if(response.status===200)
+                {
+                    alert("Password changed successfully")
+                }
             }
         )
     }

@@ -6,7 +6,6 @@ import com.example.AutoGrad.Services.dto.ChangePasswordDTO;
 import com.example.AutoGrad.Services.dto.UserDTO;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

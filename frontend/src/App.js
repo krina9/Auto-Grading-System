@@ -12,12 +12,13 @@ function App() {
         <BrowserRouter>
           <div>
             <Routes>
-              <Route path="/" element={<InstructorPwdChange/>}></Route>
+              <Route path="/" element={<Dashboard/>}></Route>
+                <Route path="/instructorProfileSettings" element={<InstructorProfile/>}></Route>
+                <Route path="/instructorPwdSettings" element={<InstructorPwdChange/>}></Route>
             </Routes>
           </div>
         </BrowserRouter>
       </div>
   );
 }
-
 export default App;

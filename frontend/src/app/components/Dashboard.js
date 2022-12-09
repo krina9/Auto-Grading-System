@@ -2,8 +2,8 @@ import React from "react";
 import axios from "axios";
 import backend_url from "../services/api";
 import * as PropTypes from "prop-types";
-import {useNavigate} from "react-router-dom";
-
+import {Link} from "react-router-dom";
+import InstructorProfile from "./InstructorProfile";
 function Button(props) {
     return null;
 }
@@ -33,7 +33,7 @@ class Dashboard extends React.Component {
                 <h2>First Name: {this.state.firstName}</h2>
                 <h2>Last Name: {this.state.lastName}</h2>
                 <h3>Email: {this.state.email}</h3>
-                <button type="submit">Profile Settings</button>
+                <Link to = "/instructorProfileSettings"><button type="submit">Profile Settings</button></Link>
                 <div className="space">
                 </div>
                 <button type="submit">Add Questions</button>
@@ -42,7 +42,7 @@ class Dashboard extends React.Component {
                 <label>Number of problems added : 0</label>
                 <div className="space">
                 </div>
-                <button type="submit">Sign out</button>
+                <Link to= "/login"><button type="submit">Sign out</button></Link>
             </div>
         )
     }
@@ -58,6 +58,5 @@ class Dashboard extends React.Component {
         )
     }
 }
-
 export default Dashboard
 
