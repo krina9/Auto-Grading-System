@@ -1,5 +1,6 @@
 package com.example.AutoGrad.Services.Impl;
 
+import com.example.AutoGrad.Model.Authority;
 import com.example.AutoGrad.Model.EmailConfirmation;
 import com.example.AutoGrad.Model.User;
 import com.example.AutoGrad.Services.IAuthenticationService;
@@ -103,10 +104,17 @@ public class AuthenticationService implements IAuthenticationService {
             CallableStatement statement = connection.prepareCall("{CALL getUserByEmail(?)}");
             statement.setString("user_email", credentials.getEmail());
             ResultSet resultSet = statement.executeQuery();
+            User user = new User();
             if (resultSet.next()) {
                 String dbPassword = resultSet.getString("user_password");
                 if (passwordUtilities.matchPassword(credentials.getPassword(), dbPassword)) {
-                    return ResponseEntity.accepted().build();
+                    user.setUserId(resultSet.getInt("user_id"));
+                    user.setFirstName(resultSet.getString("user_first_name"));
+                    user.setLastName(resultSet.getString("user_last_name"));
+                    user.setEmail(resultSet.getString("user_email"));
+                    user.setRole(Authority.valueOf(resultSet.getString("authority")));
+
+                    return ResponseEntity.ok(user);
                 } else {
                     throw new Exception("Invalid credentials");
                 }

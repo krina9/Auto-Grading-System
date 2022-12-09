@@ -3,6 +3,7 @@ import './App.css';
 import Dashboard from "./app/components/Dashboard";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import InstructorProfile from "./app/components/InstructorProfile";
+import InstructorPwdChange from "./app/components/InstructorPwdChange";
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
         <BrowserRouter>
           <div>
             <Routes>
-              <Route path="/" element={<InstructorProfile/>}></Route>
+              <Route path="/" element={<InstructorPwdChange/>}></Route>
             </Routes>
           </div>
         </BrowserRouter>

@@ -1,33 +1,30 @@
-
 import React from "react";
 import axios from "axios";
 import backend_url from "../services/api";
-import * as PropTypes from "prop-types";
-class InstructorProfile extends React.Component {
+import InstructorProfile from "./InstructorProfile";
+class InstructorPwdChange extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             userId: localStorage.getItem("user_id"),
-            firstName: '',
-            lastName: '',
+            oldPassword: '',
+            newPassword: ''
         };
-
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-    handleChange(event)
-    {
+
+    handleChange(event) {
         event.preventDefault();
         const target = event.target;
         this.setState({
             [target.name]: target.value,
         });
     }
-
     handleSubmit(event) {
         event.preventDefault();
         console.log(this.state);
-        axios.post(backend_url+"/api/user/update",this.state).then(
+        axios.post(backend_url+"/api/user/change-password",this.state).then(
             (response) => {
                 console.log(response);
             }
@@ -36,25 +33,22 @@ class InstructorProfile extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <h1>Instructor Profile Settings</h1>
+                <h1>Instructor Password Change</h1>
                 <label>
-                    New First Name:
-                    <input name="firstName" type="text" value={this.state.firstName} onChange={this.handleChange} />
+                    Current Password:
+                    <input name="oldPassword" type="password" value={this.state.oldPassword} onChange={this.handleChange} />
                 </label>
                 <div className="space">
                 </div>
                 <label>
-                    New Last Name:
-                    <input name="lastName" value={this.state.lastName} type="text" onChange={this.handleChange} />
+                    New Password:
+                    <input name="newPassword" value={this.state.newPassword} type="password" onChange={this.handleChange} />
                 </label>
                 <div className="space">
                 </div>
                 <button type="submit" value="Submit" >Submit</button>
-                <div className="space">
-                </div>
-                <button type ="submit">Change Password</button>
             </form>
         );
     }
 }
-export default InstructorProfile;
+export default InstructorPwdChange;

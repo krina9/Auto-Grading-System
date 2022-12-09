@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e97870-4fb1-49eb-82a6-8972f36d97c2" name="Changes" comment="Added unversioned files">
-      <change afterPath="$PROJECT_DIR$/CodeHat.iml" afterDir="false" />
+    <list default="true" id="94e97870-4fb1-49eb-82a6-8972f36d97c2" name="Changes" comment="Instructor Name change settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/InstructorProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/InstructorProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Controllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Controllers/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Services/IAuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Services/IAuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Services/IInstructorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Services/IInstructorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Services/Impl/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Services/Impl/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Services/Impl/InstructorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Services/Impl/InstructorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Services/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AutoGrad/Services/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/AutoGrad/Controllers/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/AutoGrad/Controllers/AuthenticationController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +88,7 @@
       <recent name="D:\MACS\Fall_22\Adv Soft Dev\Autograde\group-10\frontend\src\app" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="Spring Boot.CodeHatApplication">
     <configuration name="CodeHatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="AutoGrad" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.AutoGrad.AutoGradApplication" />
@@ -114,7 +121,7 @@
       <workItem from="1670454946296" duration="94000" />
       <workItem from="1670455069947" duration="4839000" />
       <workItem from="1670509258118" duration="3336000" />
-      <workItem from="1670602263645" duration="4257000" />
+      <workItem from="1670602263645" duration="9352000" />
     </task>
     <task id="LOCAL-00001" summary="Created an empty project.">
       <created>1664830690896</created>
@@ -151,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670455670904</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Instructor Name change settings">
+      <created>1670609003078</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670609003078</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +188,8 @@
     <MESSAGE value="Changed the name." />
     <MESSAGE value="Changed the content of CICD file" />
     <MESSAGE value="Instructor first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Instructor first commit" />
+    <MESSAGE value="Instructor Name change settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Instructor Name change settings" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
