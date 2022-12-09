@@ -29,7 +29,7 @@ class SignupComponent extends React.Component{
     handleSubmit(event) {
         event.preventDefault();
         console.log(this.state);
-        axios.post(backend_url + "/api/signup", this.state).then(
+        axios.post(backend_url + "/signup", this.state).then(
             (response) => {
                 console.log(response);
             }

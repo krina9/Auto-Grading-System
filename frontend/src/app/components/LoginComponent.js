@@ -23,13 +23,13 @@ class LoginComponent extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         console.log(this.state);
-        axios.post(backend_url + "/api/login", this.state).then(
+        axios.post(backend_url + "/login", this.state).then(
             (response) => {
-                if(response.status === 202){
+                if(response.status === 200){
                     alert("login success");
                     console.log(response.data);
-                    localStorage.setItem('user_email', response.data);
-                    if(response.data.role == "STUDENT"){
+                    localStorage.setItem('user_id', response.data.userId);
+                    if(response.data.role === "STUDENT"){
 
                     }
                 }

@@ -108,6 +108,7 @@ public class AuthenticationService implements IAuthenticationService {
             if (resultSet.next()) {
                 String dbPassword = resultSet.getString("user_password");
                 if (passwordUtilities.matchPassword(credentials.getPassword(), dbPassword)) {
+                    user.setUserId(resultSet.getInt("user_id"));
                     user.setFirstName(resultSet.getString("user_first_name"));
                     user.setLastName(resultSet.getString("user_last_name"));
                     user.setEmail(resultSet.getString("user_email"));

@@ -9,6 +9,8 @@ import java.util.Date;
 @Getter
 @Setter
 public class User {
+
+    private Integer userId;
     private String firstName;
     private String lastName;
     private String email;
@@ -29,4 +31,6 @@ public class User {
         this.password = userDTO.getPassword();
         this.isActivated = false;
     }
+
+
 }
