@@ -9,6 +9,7 @@ import java.util.Date;
 @Getter
 @Setter
 public class User {
+    private Integer userId;
     private String firstName;
     private String lastName;
     private String email;
@@ -18,6 +19,7 @@ public class User {
     private Boolean isActivated;
 
     public User(UserDTO userDTO) {
+        this.userId = userDTO.getUserId();
         this.firstName = userDTO.getFirstName();
         this.lastName = userDTO.getLastName();
         this.email = userDTO.getEmail();

@@ -2,6 +2,7 @@ package com.example.CodeHat.Controller;
 
 import com.example.CodeHat.Services.IStudentProfileService;
 import com.example.CodeHat.Services.Impl.StudentProfileService;
+import com.example.CodeHat.Services.dto.ChangePasswordDTO;
 import com.example.CodeHat.Services.dto.UserDTO;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
@@ -18,5 +19,10 @@ public class StudentProfileController {
     @PostMapping("/api/updateStudentProfile")
     public ResponseEntity updateStudentProfile(@RequestBody UserDTO userDTO) {
         return studentProfileService.updateStudentProfile(userDTO);
+    }
+
+    @PostMapping("/api/updateStudentPassword")
+    public ResponseEntity updatePassword(@RequestBody ChangePasswordDTO data) {
+        return studentProfileService.updatePassword(data);
     }
 }

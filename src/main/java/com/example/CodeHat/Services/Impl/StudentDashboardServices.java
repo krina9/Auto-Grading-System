@@ -1,4 +1,4 @@
-package com.example.CodeHat.Services.Impl.StudentDashboard;
+package com.example.CodeHat.Services.Impl;
 
 import com.example.CodeHat.Model.StudentProfile;
 import com.example.CodeHat.Services.IStudentDashboardService;

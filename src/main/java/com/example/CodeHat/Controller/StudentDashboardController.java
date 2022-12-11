@@ -1,7 +1,7 @@
-package com.example.CodeHat.Controller.StudentDashboard;
+package com.example.CodeHat.Controller;
 
 import com.example.CodeHat.Services.IStudentDashboardService;
-import com.example.CodeHat.Services.Impl.StudentDashboard.StudentDashboardServices;
+import com.example.CodeHat.Services.Impl.StudentDashboardServices;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
