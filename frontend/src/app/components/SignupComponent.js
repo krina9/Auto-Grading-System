@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import backend_url from "../services/api";
+import {Link} from "react-router-dom";
 class SignupComponent extends React.Component{
     constructor(props) {
         super(props);
@@ -85,6 +86,7 @@ class SignupComponent extends React.Component{
                     </label>
 
                     <button type="submit">Sign up</button>
+                    <Link to = "/login"><button>Login</button></Link>
                 </form>
             </div>
         );

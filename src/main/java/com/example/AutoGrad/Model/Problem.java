@@ -2,6 +2,7 @@ package com.example.AutoGrad.Model;
 
 public class Problem {
 
+    private Integer id;
     private String title;
     private String statement;
     private Float score;
@@ -63,9 +64,19 @@ public class Problem {
         return userId;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public void setUserId(Integer userId) {
         this.userId = userId;
     }
+
+
 
     @Override
     public String toString() {

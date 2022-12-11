@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { Component } from 'react'
 import { Form } from 'react-bootstrap'
-import { Link, Routes } from "react-router-dom"
+import {Link, Navigate, Routes} from "react-router-dom"
 import backend_url from '../services/api'
 
 
@@ -39,7 +39,7 @@ class AddProblem extends Component {
 
         axios.post(`${backend_url}/user/problem/add`,formdata).then(
             (response) => {
-                localStorage.setItem("problemId",response.data)
+                localStorage.setItem("problemId",response.data.id)
                 localStorage.setItem("test_case_count",this.state.numOfTestCases)
                 this.setState({redirect:"/addTestCases"})
             },
@@ -51,7 +51,7 @@ class AddProblem extends Component {
     }
     render() {
         if (this.state.redirect) {
-            return <Routes to={this.state.redirect} />
+            return <Navigate to={this.state.redirect} />
         }
 
         const {title,statement,numOfTestCases,difficulty,category,score}=this.state

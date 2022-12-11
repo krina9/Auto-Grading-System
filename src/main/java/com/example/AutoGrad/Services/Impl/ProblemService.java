@@ -34,7 +34,10 @@ public class ProblemService implements IProblemService {
             statement.setString(5, problem.getDifficulty());
             statement.setString(6, problem.getCategory());
             statement.setInt(7, problem.getUserId());
-            statement.executeQuery();
+            resultSet = statement.executeQuery();
+            if(resultSet.next()){
+                problem.setId(resultSet.getInt("last_insert_id()"));
+            }
             return problem;
 
         } catch (Exception e) {
@@ -53,6 +56,7 @@ public class ProblemService implements IProblemService {
 
             while (resultSet.next()) {
                 problem = new Problem();
+                problem.setId(resultSet.getInt("problem_id"));
                 problem.setTitle(resultSet.getString("title"));
                 problem.setStatement(resultSet.getString("statement"));
                 problem.setScore(resultSet.getFloat("score"));

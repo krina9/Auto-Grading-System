@@ -48,7 +48,7 @@ public class AuthenticationService implements IAuthenticationService {
             resultSet = statement.executeQuery();
             int userIdGenerated = -1;
             if(resultSet.next()) {
-                userIdGenerated = resultSet.getInt("id");
+                userIdGenerated = resultSet.getInt("user_id");
                 System.out.println("USER ID: " + userIdGenerated);
             }
             User user = new User(userDTO);
