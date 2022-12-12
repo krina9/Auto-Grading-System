@@ -10,6 +10,7 @@ import Student from "./components/Student";
 import Instructor from "./components/Instructor";
 import ProblemList from "./components/ProblemList";
 import AddTestCases from "./components/AddTestCases";
+import Solution from "./components/Solution";
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                         <Route path="/Instructor" element={<Instructor/>}></Route>
                         <Route path="/AddProblem" element={<AddProblem/>}></Route>
                         <Route path="/listproblems" element={<ProblemList/>}></Route>
+                        <Route path="/Solution" element={<Solution/>}></Route>
 
                     </Routes>
                 </div>

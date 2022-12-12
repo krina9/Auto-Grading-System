@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.sql.rowset.serial.SerialBlob;
 
+import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertEquals;
 
 import java.io.*;
@@ -65,7 +66,9 @@ public class SolutionService implements ISolutionService {
                         throw new Exception("Test cases not found");
 
                     File userSolution = new File(SUBMISSIONS_FOLDER + file.getOriginalFilename());
+//                    userSolution.createNewFile();
                     file.transferTo(userSolution);
+                    sleep(5000);
                     Blob blob = new SerialBlob(Files.readAllBytes(userSolution.toPath()));
                     int totalTestCases = problem.getNumOfTestCases();
                     int testCasesPassed = evaluate(testCases, userSolution);
@@ -130,7 +133,6 @@ public class SolutionService implements ISolutionService {
             while ((line = reader.readLine()) != null) {
                 userOutput += line;
             }
-
             reader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);

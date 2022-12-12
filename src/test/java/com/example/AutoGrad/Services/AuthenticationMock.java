@@ -7,7 +7,7 @@ public class AuthenticationMock implements IAuthenticationDB{
     public void saveUser(String userName, AuthenticationService authenticationService) {
         if(userName.equals("trusha"))
         {
-            authenticationService.addUser("")
+
         }
     }
 }

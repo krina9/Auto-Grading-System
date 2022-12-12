@@ -6,8 +6,9 @@ class Solution extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedFile: null,
-            userId: localStorage.getItem("user_id")
+            solution: null,
+            userId: localStorage.getItem("user_id"),
+            problemId: localStorage.getItem("problemId")
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,7 +17,7 @@ class Solution extends React.Component {
     onFileChange = event => {
 
         // Update the state
-        this.setState({ selectedFile: event.target.files[0] });
+        this.setState({ solution: event.target.files[0] });
 
     };
 
@@ -31,11 +32,13 @@ class Solution extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         console.log(this.state);
-        axios.post(backend_url + "/api/user/upload-solution", this.state).then(
+        const formData = new FormData();
+        formData.append("solution", this.state.solution);
+        axios.post(backend_url + `/user/${this.state.userId}/problem/${this.state.problemId}/solve`, formData).then(
             (response) => {
                 console.log(response);
                 if (response.status === 200) {
-                    alert("Solution file uploaded successfully")
+                    console.log(response.data);
                 }
             }
         )
