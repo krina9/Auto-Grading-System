@@ -1,6 +1,6 @@
-package com.example.CodeHat.Model;
+package com.example.AutoGrad.Model;
 
-import com.example.CodeHat.Services.dto.UserDTO;
+import com.example.AutoGrad.Services.dto.UserDTO;
 import lombok.Getter;
 import lombok.Setter;
 

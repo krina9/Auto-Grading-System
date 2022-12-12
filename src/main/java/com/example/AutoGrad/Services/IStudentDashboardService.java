@@ -1,4 +1,4 @@
-package com.example.CodeHat.Services;
+package com.example.AutoGrad.Services;
 
 import org.springframework.http.ResponseEntity;
 

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>CodeHat</artifactId>
+	<artifactId>AutoGrad</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CodeHat</name>
+	<name>AutoGrad</name>
 	<description>Autograding System</description>
 	<properties>
 		<java.version>17</java.version>

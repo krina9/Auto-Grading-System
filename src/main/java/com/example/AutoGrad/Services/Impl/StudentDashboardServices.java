@@ -1,7 +1,7 @@
-package com.example.CodeHat.Services.Impl;
+package com.example.AutoGrad.Services.Impl;
 
-import com.example.CodeHat.Model.StudentProfile;
-import com.example.CodeHat.Services.IStudentDashboardService;
+import com.example.AutoGrad.Model.StudentProfile;
+import com.example.AutoGrad.Services.IStudentDashboardService;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
 
@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 
 public class StudentDashboardServices implements IStudentDashboardService {
     @Lazy
-    private Connection connection = com.example.CodeHat.Services.Connection.getInstance();
+    private Connection connection = com.example.AutoGrad.Services.Connection.getInstance();
 
     @Override
     public ResponseEntity getStudentById(Integer userId) {

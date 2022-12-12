@@ -1,6 +1,6 @@
-package com.example.CodeHat.Services.Impl;
+package com.example.AutoGrad.Services.Impl;
 
-import com.example.CodeHat.Services.IUtilities;
+import com.example.AutoGrad.Services.IUtilities;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;

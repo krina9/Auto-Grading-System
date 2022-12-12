@@ -1,4 +1,4 @@
-package com.example.CodeHat.Services.dto;
+package com.example.AutoGrad.Services.dto;
 
 public class StudentProfileDTO {
 

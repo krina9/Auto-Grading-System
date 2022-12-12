@@ -1,21 +1,20 @@
-package com.example.CodeHat.Services.Impl;
+package com.example.AutoGrad.Services.Impl;
 
-import com.example.CodeHat.Model.User;
-import com.example.CodeHat.Services.IStudentProfileService;
-import com.example.CodeHat.Services.dto.ChangePasswordDTO;
-import com.example.CodeHat.Services.dto.UserDTO;
+import com.example.AutoGrad.Model.User;
+import com.example.AutoGrad.Services.IStudentProfileService;
+import com.example.AutoGrad.Services.dto.ChangePasswordDTO;
+import com.example.AutoGrad.Services.dto.UserDTO;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class StudentProfileService implements IStudentProfileService {
 
     @Lazy
-    private Connection connection = com.example.CodeHat.Services.Connection.getInstance();
+    private Connection connection = com.example.AutoGrad.Services.Connection.getInstance();
 
     @Lazy
     private Utilities passwordUtilities = new Utilities();

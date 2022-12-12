@@ -1,9 +1,9 @@
-package com.example.CodeHat.Controller;
+package com.example.AutoGrad.Controllers;
 
-import com.example.CodeHat.Services.IStudentProfileService;
-import com.example.CodeHat.Services.Impl.StudentProfileService;
-import com.example.CodeHat.Services.dto.ChangePasswordDTO;
-import com.example.CodeHat.Services.dto.UserDTO;
+import com.example.AutoGrad.Services.IStudentProfileService;
+import com.example.AutoGrad.Services.Impl.StudentProfileService;
+import com.example.AutoGrad.Services.dto.ChangePasswordDTO;
+import com.example.AutoGrad.Services.dto.UserDTO;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

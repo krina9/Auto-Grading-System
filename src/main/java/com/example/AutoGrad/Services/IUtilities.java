@@ -1,4 +1,4 @@
-package com.example.CodeHat.Services;
+package com.example.AutoGrad.Services;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;

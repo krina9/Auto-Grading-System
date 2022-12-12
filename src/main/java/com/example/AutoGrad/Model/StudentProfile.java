@@ -1,4 +1,4 @@
-package com.example.CodeHat.Model;
+package com.example.AutoGrad.Model;
 
 public class StudentProfile {
     private String firstName;

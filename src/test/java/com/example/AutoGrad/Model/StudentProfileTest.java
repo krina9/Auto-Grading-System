@@ -1,4 +1,4 @@
-package com.example.CodeHat.Model;
+package com.example.AutoGrad.Model;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
