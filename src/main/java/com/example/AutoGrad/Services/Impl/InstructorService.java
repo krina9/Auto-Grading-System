@@ -1,5 +1,4 @@
 package com.example.AutoGrad.Services.Impl;
-
 import com.example.AutoGrad.Model.User;
 import com.example.AutoGrad.Services.IInstructorService;
 import com.example.AutoGrad.Services.dto.ChangePasswordDTO;
@@ -13,10 +12,8 @@ import java.sql.ResultSet;
 public class InstructorService implements IInstructorService {
     @Lazy
     private Connection connection = com.example.AutoGrad.Services.Connection.getInstance();
-
     @Lazy
     private Utilities passwordUtilities = new Utilities();
-
     @Override
     public ResponseEntity updateInstructor(UserDTO userDTO) {
         try {
@@ -38,7 +35,6 @@ public class InstructorService implements IInstructorService {
             return ResponseEntity.internalServerError().body(e.getMessage());
         }
     }
-
     public ResponseEntity updatePassword(ChangePasswordDTO data) {
         try {
             PreparedStatement statement = connection.prepareStatement("{CALL getUserById(?)}");
