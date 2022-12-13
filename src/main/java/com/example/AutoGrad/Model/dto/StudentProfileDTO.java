@@ -1,4 +1,4 @@
-package com.example.AutoGrad.Services.dto;
+package com.example.AutoGrad.Model.dto;
 
 public class StudentProfileDTO {
 

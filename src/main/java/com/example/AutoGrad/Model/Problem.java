@@ -1,6 +1,11 @@
 package com.example.AutoGrad.Model;
 
-public class Problem {
+import com.example.AutoGrad.dataLayer.IProblem;
+import com.example.AutoGrad.dataLayer.dao.ProblemDAO;
+
+import java.util.List;
+
+public class Problem implements IProblem {
 
     private Integer id;
     private String title;
@@ -9,8 +14,15 @@ public class Problem {
     private Integer numOfTestCases;
     private String difficulty;
     private String category;
-
     private Integer userId;
+    private ProblemDAO problemDAO;
+
+    public Problem() {
+    }
+
+    public Problem(ProblemDAO problemDAO) {
+        this.problemDAO = problemDAO;
+    }
 
     public String getTitle() {
         return title;
@@ -89,5 +101,25 @@ public class Problem {
                 ", category='" + category + '\'' +
                 ", userId=" + userId +
                 '}';
+    }
+
+    @Override
+    public Problem addProblem(Problem problem) {
+        return problemDAO.addProblem(problem);
+    }
+
+    @Override
+    public List<Problem> getAllProblems() {
+        return problemDAO.getAllProblems();
+    }
+
+    @Override
+    public Problem getProblemById(int problemId) {
+        return problemDAO.getProblemById(problemId);
+    }
+
+    @Override
+    public List<Problem> getAllProblemByUser(int userId) {
+        return problemDAO.getAllProblemByUser(userId);
     }
 }

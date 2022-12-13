@@ -1,13 +1,13 @@
-package com.example.AutoGrad.Services;
+package com.example.AutoGrad.dataLayer;
 
 import com.example.AutoGrad.Model.TestCases;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
-public interface ITestCaseService {
+public interface ITestCases {
 
-    ResponseEntity addTestCases(List<TestCases> testCases);
+    List<TestCases> addTestCases(List<TestCases> testCases);
 
     List<TestCases> getAllTestCasesByProblemId(int problemId);
 }

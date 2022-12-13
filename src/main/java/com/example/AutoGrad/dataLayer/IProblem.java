@@ -1,11 +1,10 @@
-package com.example.AutoGrad.Services;
+package com.example.AutoGrad.dataLayer;
 
 import com.example.AutoGrad.Model.Problem;
-import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
-public interface IProblemService {
+public interface IProblem {
 
     Problem addProblem(Problem problem);
 

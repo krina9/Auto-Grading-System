@@ -1,10 +1,8 @@
 package com.example.AutoGrad.Controllers;
 
 import com.example.AutoGrad.Model.Solutions;
-import com.example.AutoGrad.Services.ISolutionService;
-import com.example.AutoGrad.Services.IUserService;
-import com.example.AutoGrad.Services.Impl.SolutionService;
-import com.example.AutoGrad.Services.Impl.UserService;
+import com.example.AutoGrad.dataLayer.ISolutions;
+import com.example.AutoGrad.dataLayer.dao.SolutionDAO;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +14,8 @@ import java.util.List;
 @CrossOrigin
 public class SolutionController {
 
-    @Lazy
-    private ISolutionService solutionService = new SolutionService();
+    private SolutionDAO solutionDAO = new SolutionDAO();
+    private ISolutions solutionService = new Solutions(solutionDAO);
 
     @PostMapping("/api/user/{userId}/problem/{problemId}/solve")
     public ResponseEntity solve(@RequestBody MultipartFile solution, @PathVariable int userId, @PathVariable int problemId) throws Exception {

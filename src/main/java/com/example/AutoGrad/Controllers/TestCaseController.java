@@ -1,8 +1,8 @@
 package com.example.AutoGrad.Controllers;
 
 import com.example.AutoGrad.Model.TestCases;
-import com.example.AutoGrad.Services.ITestCaseService;
-import com.example.AutoGrad.Services.Impl.TestCaseService;
+import com.example.AutoGrad.dataLayer.ITestCases;
+import com.example.AutoGrad.dataLayer.dao.TestCaseDAO;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,15 +14,22 @@ import java.util.List;
 public class TestCaseController {
 
     @Lazy
-    private ITestCaseService testCaseService = new TestCaseService();
+    TestCaseDAO testCaseDAO = new TestCaseDAO();
+    @Lazy
+    private ITestCases testCaseService = new TestCases(testCaseDAO);
 
     @PostMapping("/api/user/problem/test-case/add")
-    public ResponseEntity addTestCases(@RequestBody List<TestCases> testCases){
-        return testCaseService.addTestCases(testCases);
+    public ResponseEntity addTestCases(@RequestBody List<TestCases> testCases) {
+        List<TestCases> resultFromDB = testCaseService.addTestCases(testCases);
+        if (resultFromDB != null) {
+            return ResponseEntity.ok().body(testCases);
+        } else{
+            return ResponseEntity.badRequest().build();
+        }
     }
 
     @GetMapping("/api/user/problem/{problemId}/test-cases")
     public ResponseEntity getAllTestCasesByProblemId(@PathVariable int problemId) {
-        return ResponseEntity.ok(testCaseService.getAllTestCasesByProblemId(problemId));
+        return ResponseEntity.ok().body(testCaseService.getAllTestCasesByProblemId(problemId));
     }
 }

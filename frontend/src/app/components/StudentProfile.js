@@ -30,7 +30,7 @@ class StudentProfile extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         console.log(this.state);
-        axios.post(backend_url+"/api/updateStudentProfile",this.state).then(
+        axios.post(backend_url+"/user/update",this.state).then(
             (response) => {
                 console.log(response);
             }
@@ -66,7 +66,7 @@ class StudentProfile extends React.Component {
                 <button type="submit" value="Submit" >Update</button>
             </form>
             <br/>
-            <Link to="/student/profile/password">
+            <Link to="/StudentPwd">
                  <button type="button">
                       Update Password
                  </button>

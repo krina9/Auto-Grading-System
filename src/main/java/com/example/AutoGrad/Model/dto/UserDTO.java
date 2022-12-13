@@ -1,4 +1,4 @@
-package com.example.AutoGrad.Services.dto;
+package com.example.AutoGrad.Model.dto;
 
 import com.example.AutoGrad.Model.Authority;
 import lombok.Getter;

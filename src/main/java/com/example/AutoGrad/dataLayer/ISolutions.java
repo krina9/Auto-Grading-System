@@ -1,14 +1,13 @@
-package com.example.AutoGrad.Services;
+package com.example.AutoGrad.dataLayer;
 
 import com.example.AutoGrad.Model.Solutions;
 import com.example.AutoGrad.Model.TestCases;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.util.List;
 
-public interface ISolutionService {
+public interface ISolutions {
 
     Solutions addSolution(int userId, int problemId, MultipartFile file) throws Exception;
 

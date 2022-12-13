@@ -19,11 +19,9 @@ class StudentDashboard extends React.Component {
     {
         super(props);
         this.state ={
-            firstName: '',
-            lastName: '',
-            email: '',
-            score:'',
-            noOfProblemSolved: '',
+            user: null,
+            score: null,
+            noOfProblemSolved: null,
             userId: localStorage.getItem("user_id")
         };
         this.getUserInfo();
@@ -32,13 +30,13 @@ class StudentDashboard extends React.Component {
         return (
             <div>
                 <h1>Student Dashboard</h1>
-                <h3>First Name: {this.state.firstName}</h3>
-                <h3>Last Name: {this.state.lastName}</h3>
-                <h3>Email: {this.state.email}</h3>
+                <h3>First Name: {this.state.user.firstName}</h3>
+                <h3>Last Name: {this.state.user.lastName}</h3>
+                <h3>Email: {this.state.user.email}</h3>
                 <h3>Score: {this.state.score}</h3>
                 <h3>No of Problems Solved: {this.state.noOfProblemSolved}</h3>
                 <br/>
-                <Link to="/student/profile">
+                <Link to="/StudentProfile">
                      <button type="button">
                           Edit Profile Settings
                      </button>
@@ -64,15 +62,27 @@ class StudentDashboard extends React.Component {
     }
         getUserInfo = function() {
         //api/studentDashboard/{userId}
-        axios.get(backend_url+`/api/studentDashboard/${this.state.userId}`).then(
+        axios.get(backend_url+`/user/${this.state.userId}`).then(
             (response) => {
-                this.setState({firstName:response.data.firstName});
-                this.setState({lastName:response.data.lastName});
-                this.setState({email:response.data.email});
-                this.setState({score:response.data.score});
-                this.setState({noOfProblemSolved:response.data.numberOfProblemSolved});
+                this.setState({user : response.data});
             }, (error) => {
                 console.log(error)
+            }
+        );
+
+        axios.get(backend_url + `/user/${this.state.userId}/get-problem-solved`).then (
+            (response) => {
+                this.setState({noOfProblemSolved: response.data});
+            } , (err) => {
+                console.error(err);
+            }
+        );
+
+        axios.get(backend_url + `/user/${this.state.userId}/get-score`).then (
+            (response) => {
+                this.setState({score :response.data});
+            }, (err) => {
+                console.error(err);
             }
         )
     }

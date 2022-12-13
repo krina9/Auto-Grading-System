@@ -33,7 +33,7 @@ class Dashboard extends React.Component {
                 <h2>First Name: {this.state.firstName}</h2>
                 <h2>Last Name: {this.state.lastName}</h2>
                 <h3>Email: {this.state.email}</h3>
-                <Link to = "/instructorProfileSettings"><button type="submit">Profile Settings</button></Link>
+                <Link to = "/InstructorProfile"><button type="submit">Profile Settings</button></Link>
                 <div className="space">
                 </div>
                 <button type="submit">Add Questions</button>
@@ -47,7 +47,7 @@ class Dashboard extends React.Component {
         )
     }
         getUserInfo = function() {
-        axios.get(backend_url+`/api/user/${this.state.user_email}`).then(
+        axios.get(backend_url+`/user/${this.state.user_email}`).then(
             (response) => {
                 this.setState({firstName:response.data.firstName});
                 this.setState({lastName:response.data.lastName});
