@@ -43,7 +43,7 @@ public class ProblemDAO {
         }
     }
 
-    public List<Problem> getAllProblems() {
+    public List<Problem> getAllProblem() {
         try {
             PreparedStatement statement = connection.prepareStatement("{CALL getAllProblems()}");
             ResultSet resultSet = statement.executeQuery();

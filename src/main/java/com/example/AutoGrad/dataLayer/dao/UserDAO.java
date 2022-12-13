@@ -63,7 +63,7 @@ public class UserDAO {
             user.setIsActivated(resultSet.getBoolean(8));
             return user;
         } else {
-            throw new Exception("User not found");
+            return null;
         }
     }
 
@@ -176,12 +176,12 @@ public class UserDAO {
 
     public User updateInstructor(UserDTO userDTO) {
         try {
-            User user = getUserByEmail(userDTO.getEmail());
+            User user = getUserById(userDTO.getUserId());
             if (user != null) {
-                PreparedStatement statement = connection.prepareStatement("{CALL updateInstructorProfile(?,?,?)}");
+                PreparedStatement statement = connection.prepareStatement("{CALL updateUser(?,?,?)}");
                 statement.setString(1, userDTO.getFirstName());
                 statement.setString(2, userDTO.getLastName());
-                statement.setString(3, userDTO.getEmail());
+                statement.setInt(3, userDTO.getUserId());
                 statement.execute();
                 return getUserByEmail(user.getEmail());
             } else {

@@ -105,12 +105,15 @@ public class Problem implements IProblem {
 
     @Override
     public Problem addProblem(Problem problem) {
-        return problemDAO.addProblem(problem);
+        Problem problemInDB = problemDAO.addProblem(problem);
+        System.out.printf("HELLO");
+        return problemInDB;
     }
 
     @Override
-    public List<Problem> getAllProblems() {
-        return problemDAO.getAllProblems();
+    public List<Problem> getAllProblem() {
+        return problemDAO.getAllProblem();
+//        return null;
     }
 
     @Override

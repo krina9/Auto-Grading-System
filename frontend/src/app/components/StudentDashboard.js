@@ -19,9 +19,9 @@ class StudentDashboard extends React.Component {
     {
         super(props);
         this.state ={
-            user: null,
-            score: null,
-            noOfProblemSolved: null,
+            user: " ",
+            score: " ",
+            noOfProblemSolved: " ",
             userId: localStorage.getItem("user_id")
         };
         this.getUserInfo();
@@ -37,54 +37,57 @@ class StudentDashboard extends React.Component {
                 <h3>No of Problems Solved: {this.state.noOfProblemSolved}</h3>
                 <br/>
                 <Link to="/StudentProfile">
-                     <button type="button">
-                          Edit Profile Settings
-                     </button>
+                    <button type="button">
+                        Edit Profile Settings
+                    </button>
                 </Link>
                 <div className="space">
                 </div>
                 <br/>
-                <Link to="/student/learning">
-                     <button type="button">
-                          Start Learning
-                     </button>
+                <Link to="/StudentLearning">
+                    <button type="button">
+                        Start Learning
+                    </button>
                 </Link>
                 <div className="space">
                 </div>
                 <br/>
                 <Link to="#">
-                     <button type="button">
-                          Sign out
-                     </button>
+                    <button type="button">
+                        Sign out
+                    </button>
                 </Link>
             </div>
         )
     }
-        getUserInfo = function() {
-        //api/studentDashboard/{userId}
+    getUserInfo = function() {
+        //api/studentDashboard/{userId}  /api/user/{userId}
         axios.get(backend_url+`/user/${this.state.userId}`).then(
             (response) => {
-                this.setState({user : response.data});
+                this.setState({user :response.data});
             }, (error) => {
                 console.log(error)
             }
         );
 
-        axios.get(backend_url + `/user/${this.state.userId}/get-problem-solved`).then (
+        // /api/user/{userId}/get-problem-solved
+        axios.get(backend_url+`/user/${this.state.userId}/get-problem-solved`).then(
             (response) => {
-                this.setState({noOfProblemSolved: response.data});
-            } , (err) => {
-                console.error(err);
+                this.setState({noOfProblemSolved :response.data});
+            }, (error) => {
+                console.log(error)
             }
         );
 
-        axios.get(backend_url + `/user/${this.state.userId}/get-score`).then (
+        // user/{userId}/get-score
+        axios.get(backend_url+`/user/${this.state.userId}/get-score`).then(
             (response) => {
                 this.setState({score :response.data});
-            }, (err) => {
-                console.error(err);
+            }, (error) => {
+                console.log(error)
             }
-        )
+        );
+
     }
 }
 

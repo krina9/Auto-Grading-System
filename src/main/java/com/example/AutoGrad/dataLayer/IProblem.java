@@ -8,7 +8,7 @@ public interface IProblem {
 
     Problem addProblem(Problem problem);
 
-    List<Problem> getAllProblems();
+    List<Problem> getAllProblem();
 
     Problem getProblemById(int problemId);
 

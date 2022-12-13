@@ -3,6 +3,7 @@ package com.example.AutoGrad.Controllers;
 import com.example.AutoGrad.Model.Solutions;
 import com.example.AutoGrad.dataLayer.ISolutions;
 import com.example.AutoGrad.dataLayer.dao.SolutionDAO;
+import com.example.AutoGrad.factory.AutoGradFactoryCreate;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,9 +14,11 @@ import java.util.List;
 @RestController
 @CrossOrigin
 public class SolutionController {
+    AutoGradFactoryCreate factory = new AutoGradFactoryCreate();
+    ISolutions solutionService = new Solutions(factory.getSolutionFactory().create());
 
     private SolutionDAO solutionDAO = new SolutionDAO();
-    private ISolutions solutionService = new Solutions(solutionDAO);
+    //private ISolutions solutionService = new Solutions(solutionDAO);
 
     @PostMapping("/api/user/{userId}/problem/{problemId}/solve")
     public ResponseEntity solve(@RequestBody MultipartFile solution, @PathVariable int userId, @PathVariable int problemId) throws Exception {

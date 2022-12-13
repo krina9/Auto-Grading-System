@@ -33,7 +33,7 @@ class LoginComponent extends React.Component {
                     console.log(response.data);
                     localStorage.setItem('user_id', response.data.userId);
                     if(response.data.role === "STUDENT") {
-                        this.setState({ redirect: "/StudentDashboard" });
+                        this.setState({ redirect: "/studentDashboard" });
                     }else{
                         this.setState({ redirect: "/InstructorDashboard" });
 

@@ -68,7 +68,7 @@ public class User implements IUser, IAuthentication {
             if (userInDB != null) {
                 throw new Exception("User already exist");
             } else {
-                return addUser(userDTO);
+                return userDAO.addUser(userDTO);
             }
         }catch (Exception e) {
             e.printStackTrace();

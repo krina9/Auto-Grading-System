@@ -22,7 +22,7 @@ class Dashboard extends React.Component {
             firstName: '',
             lastName: '',
             email: '',
-            user_email: localStorage.getItem("user_email")
+            user_id: localStorage.getItem("user_id")
         };
         this.getUserInfo();
     }
@@ -47,7 +47,7 @@ class Dashboard extends React.Component {
         )
     }
         getUserInfo = function() {
-        axios.get(backend_url+`/user/${this.state.user_email}`).then(
+        axios.get(backend_url+`/user/${this.state.user_id}`).then(
             (response) => {
                 this.setState({firstName:response.data.firstName});
                 this.setState({lastName:response.data.lastName});
