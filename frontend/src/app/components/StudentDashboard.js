@@ -38,7 +38,7 @@ class StudentDashboard extends React.Component {
                 <h3>Score: {this.state.score}</h3>
                 <h3>No of Problems Solved: {this.state.noOfProblemSolved}</h3>
                 <br/>
-                <Link to="/student/profile">
+                <Link to="/studentProfile">
                      <button type="button">
                           Edit Profile Settings
                      </button>
@@ -46,7 +46,7 @@ class StudentDashboard extends React.Component {
                 <div className="space">
                 </div>
                 <br/>
-                <Link to="/student/learning">
+                <Link to="/studentLearning">
                      <button type="button">
                           Start Learning
                      </button>
@@ -64,7 +64,7 @@ class StudentDashboard extends React.Component {
     }
         getUserInfo = function() {
         //api/studentDashboard/{userId}
-        axios.get(backend_url+`/api/studentDashboard/${this.state.userId}`).then(
+        axios.get(backend_url+`/studentDashboard/${this.state.userId}`).then(
             (response) => {
                 this.setState({firstName:response.data.firstName});
                 this.setState({lastName:response.data.lastName});

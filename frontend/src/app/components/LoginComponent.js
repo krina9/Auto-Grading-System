@@ -3,8 +3,6 @@ import axios from "axios";
 import backend_url from "../services/api";
 import {Link, Navigate, Route, Routes} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
-import Student from "./Student";
-import Instructor from "./Instructor";
 import {RedirectFunction} from "react-router-dom";
 
 class LoginComponent extends React.Component {
@@ -35,9 +33,9 @@ class LoginComponent extends React.Component {
                     console.log(response.data);
                     localStorage.setItem('user_id', response.data.userId);
                     if(response.data.role === "STUDENT") {
-                        this.setState({ redirect: "/Student" });
+                        this.setState({ redirect: "/studentDashboard" });
                     }else{
-                        this.setState({ redirect: "/Dashboard" });
+                        this.setState({ redirect: "/instructorDashboard" });
 
                     }
 

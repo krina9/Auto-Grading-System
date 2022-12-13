@@ -47,7 +47,7 @@ class Dashboard extends React.Component {
         )
     }
         getUserInfo = function() {
-        axios.get(backend_url+`/api/user/${this.state.user_email}`).then(
+        axios.get(backend_url+`/user/${this.state.user_email}`).then(
             (response) => {
                 this.setState({firstName:response.data.firstName});
                 this.setState({lastName:response.data.lastName});

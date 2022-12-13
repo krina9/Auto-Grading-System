@@ -29,7 +29,7 @@ class StudentPassword extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         console.log(this.state);
-        axios.post(backend_url+"/api/updateStudentPassword",this.state).then(
+        axios.post(backend_url+"/updateStudentPassword",this.state).then(
             (response) => {
                 console.log(response);
             }
