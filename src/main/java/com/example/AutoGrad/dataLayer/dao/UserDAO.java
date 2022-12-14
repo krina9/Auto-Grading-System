@@ -10,11 +10,12 @@ import com.example.AutoGrad.Services.Impl.MailService;
 import com.example.AutoGrad.Services.Impl.Utilities;
 import com.example.AutoGrad.Model.dto.LoginDTO;
 import com.example.AutoGrad.Model.dto.UserDTO;
+import com.example.AutoGrad.dataLayer.mock.IUserDAO;
 import org.springframework.context.annotation.Lazy;
 
 import java.sql.*;
 
-public class UserDAO {
+public class UserDAO implements IUserDAO {
 
     @Lazy
     private java.sql.Connection connection = Connection.getInstance();

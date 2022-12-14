@@ -21,7 +21,7 @@ public class UserController {
         return ResponseEntity.ok().body(user);
     }
 
-    @PostMapping("/api/user/update")
+    @PostMapping("/api/user/update-profile")
     public ResponseEntity update(@RequestBody UserDTO userDTO) {
         User user = userServices.updateUser(userDTO);
         if(user != null) {

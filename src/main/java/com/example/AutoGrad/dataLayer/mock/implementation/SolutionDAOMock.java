@@ -32,9 +32,6 @@ public class SolutionDAOMock implements ISolutionDAO {
     @Override
     public List<Solutions> getSolutionsByUserId(int userId) {
         List<Solutions> solnListUser = new ArrayList<>();
-        // Solutions sol1;
-        //Solutions sol2;
-        //Solutions sol1;
         try {
 
             String date = "21-9-2017";
@@ -47,8 +44,6 @@ public class SolutionDAOMock implements ISolutionDAO {
         } catch (Exception e) {
             e.printStackTrace();
         }
-//        solnListUser.add(sol1);
-//        solnListUser.add(sol2);
         return solnListUser;
     }
     @Override
@@ -68,9 +63,20 @@ public class SolutionDAOMock implements ISolutionDAO {
         }
         return solnList;
     }
-
     @Override
     public List<Solutions> getAllSolutions() {
-        return null;
+        List<Solutions> allSolnList = new ArrayList<>();
+        try{
+            String date = "21-8-2018";
+            SimpleDateFormat sdt1 = new SimpleDateFormat("dd-MM-YYYY");
+            Date result = sdt1.parse(date);
+            Solutions allSoln1 = new Solutions(1, 5, 0, 15, result, new SerialBlob(new String("Test01").getBytes(StandardCharsets.UTF_8)), 1, 3);
+            Solutions allSoln2 = new Solutions(2, 6, 0, 10, result, new SerialBlob(new String("Test02").getBytes(StandardCharsets.UTF_8)), 1, 3);
+            allSolnList.add(allSoln1);
+            allSolnList.add(allSoln2);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return allSolnList;
     }
 }

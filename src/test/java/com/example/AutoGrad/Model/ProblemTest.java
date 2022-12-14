@@ -91,4 +91,25 @@ public class ProblemTest {
         assertEquals(problemList.get(1).getUserId(),1);
         System.out.println("Get Problem by userId test case passed");
     }
+
+    @Test
+    public void getterSetterTest(){
+        Problem problem=new Problem();
+        problem.setId(1);
+        problem.setTitle("Subtraction");
+        problem.setStatement("Subtraction");
+        problem.setScore(15.2f);
+        problem.setNumOfTestCases(2);
+        problem.setDifficulty("easy");
+        problem.setCategory("number");
+        problem.setUserId(2);
+        assertEquals(problem.getId(),1);
+        assertEquals(problem.getTitle(),"Subtraction");
+        assertEquals(problem.getStatement(),"Subtraction");
+        assertEquals(problem.getScore(),15.2f);
+        assertEquals(problem.getNumOfTestCases(),2);
+        assertEquals(problem.getDifficulty(),"easy");
+        assertEquals(problem.getCategory(),"number");
+        assertEquals(problem.getUserId(),2);
+    }
 }

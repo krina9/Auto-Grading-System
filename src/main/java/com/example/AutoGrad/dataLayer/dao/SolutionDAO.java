@@ -44,7 +44,6 @@ public class SolutionDAO implements ISolutionDAO {
             return null;
         }
     }
-
     public List<Solutions> getSolutionsByUserId(int userId) {
         try {
             PreparedStatement statement = connection.prepareStatement("{CALL getAllSolutionByUser(?)}");
@@ -56,7 +55,6 @@ public class SolutionDAO implements ISolutionDAO {
             return null;
         }
     }
-
     public List<Solutions> getSolutionsByUserIdAndProblemId(int userId, int problemId) {
         try{
             PreparedStatement statement = connection.prepareStatement("{CALL getSolutionByUserIdAndProblemId(?, ?)}");
@@ -69,7 +67,6 @@ public class SolutionDAO implements ISolutionDAO {
             return null;
         }
     }
-
     private List<Solutions> makeSolutionListFromResultSet(ResultSet resultSet) throws Exception {
         List<Solutions> solutions = new ArrayList<>();
         Solutions solution;

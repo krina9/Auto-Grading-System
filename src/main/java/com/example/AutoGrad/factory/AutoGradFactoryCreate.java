@@ -25,4 +25,11 @@ public class AutoGradFactoryCreate {
     public SolutionDAOMockFactory getSolutionDAOMockFactory() {
         return new SolutionDAOMockFactory();
     }
+
+    public TestCaseDAOMockFactory getTestCaseDAOMockFactory() {
+        return new TestCaseDAOMockFactory();
+    }
+    public UserDAOMockFactory getUserCaseDAOMockFactory(){
+        return new UserDAOMockFactory();
+    }
 }

@@ -6,6 +6,7 @@ import com.example.AutoGrad.Model.dto.LoginDTO;
 import com.example.AutoGrad.Model.dto.UserDTO;
 import com.example.AutoGrad.dataLayer.IUser;
 import com.example.AutoGrad.dataLayer.dao.UserDAO;
+import com.example.AutoGrad.dataLayer.mock.IUserDAO;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,7 +25,7 @@ public class User implements IUser, IAuthentication {
     private Date registeredOn;
     private Boolean isActivated;
 
-    private UserDAO userDAO;
+    private IUserDAO userDAO;
     public User(){
 
     }
@@ -37,7 +38,7 @@ public class User implements IUser, IAuthentication {
         this.role = role;
     }
 
-    public User(UserDAO userDAO) {
+    public User(IUserDAO userDAO) {
         this.userDAO = userDAO;
     }
     public User(UserDTO userDTO) {

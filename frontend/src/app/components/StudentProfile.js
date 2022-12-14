@@ -30,7 +30,7 @@ class StudentProfile extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         console.log(this.state);
-        axios.post(backend_url+"/user/update",this.state).then(
+        axios.post(backend_url+"/user/update-profile",this.state).then(
             (response) => {
                 console.log(response);
             }

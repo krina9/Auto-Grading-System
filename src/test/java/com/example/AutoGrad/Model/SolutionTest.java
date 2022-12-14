@@ -1,19 +1,14 @@
 package com.example.AutoGrad.Model;
 
-import com.example.AutoGrad.dataLayer.IProblem;
 import com.example.AutoGrad.dataLayer.ISolutions;
 import com.example.AutoGrad.factory.AutoGradFactoryCreate;
 import org.junit.jupiter.api.Test;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.commons.CommonsMultipartFile;
-
 import javax.sql.rowset.serial.SerialBlob;
 import java.nio.charset.StandardCharsets;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -50,7 +45,6 @@ public class SolutionTest {
         assertEquals(solnList.get(1).getUserId(),1);
 
         System.out.println("Get Solution By User Id test case passed");
-
     }
     @Test
     public void getSolutionsByUserIdAndProblemIdTest() throws SQLException, ParseException {
@@ -80,6 +74,50 @@ public class SolutionTest {
         assertEquals(solnList1.get(1).getProblemId(),1);
         assertEquals(solnList1.get(1).getUserId(),2);
         System.out.println("Get Solution By User Id and problem Id test case passed");
+    }
 
+    @Test
+    public void getAllSolutions() throws SQLException, ParseException {
+        List<Solutions> allSolnList = solutionService.getSolutionsByUserIdAndProblemId(2,2);
+        assertEquals(allSolnList.size(), 2);
+        assertEquals(allSolnList.get(0).getSolutionId(),1);
+        assertEquals(allSolnList.get(0).getTestCasesPassed(),5);
+        assertEquals(allSolnList.get(0).getTestCasesFailed(),0);
+        assertEquals(allSolnList.get(0).getScore(),15);
+
+        String date = "21-8-2018";
+        SimpleDateFormat sdt = new SimpleDateFormat("dd-MM-YYYY");
+        Date result = sdt.parse(date);
+
+        assertEquals(allSolnList.get(0).getSolutionSubmittedOn(),result);
+        assertEquals(allSolnList.get(0).getSolution(),new SerialBlob(new String("Test01").getBytes(StandardCharsets.UTF_8)));
+        assertEquals(allSolnList.get(0).getProblemId(),1);
+        assertEquals(allSolnList.get(0).getUserId(),3);
+
+        assertEquals(allSolnList.get(1).getSolutionId(),2);
+        assertEquals(allSolnList.get(1).getTestCasesPassed(),6);
+        assertEquals(allSolnList.get(1).getTestCasesFailed(),0);
+        assertEquals(allSolnList.get(1).getScore(),10);
+        assertEquals(allSolnList.get(1).getSolutionSubmittedOn(),result);
+        assertEquals(allSolnList.get(1).getSolution(),new SerialBlob(new String("Test02").getBytes(StandardCharsets.UTF_8)));
+        assertEquals(allSolnList.get(1).getProblemId(),1);
+        assertEquals(allSolnList.get(1).getUserId(),3);
+        System.out.println("Get All Solution test case passed");
+    }
+    @Test
+    public void getterSetterTest(){
+        Solutions solutions=new Solutions();
+        solutions.setSolutionId(1);
+        solutions.setTestCasesPassed(2);
+        solutions.setTestCasesFailed(0);
+        solutions.setProblemId(1);
+        solutions.setUserId(1);
+        solutions.setScore(10);
+        assertEquals(solutions.getSolutionId(),1);
+        assertEquals(solutions.getTestCasesPassed(),2);
+        assertEquals(solutions.getTestCasesFailed(),0);
+        assertEquals(solutions.getProblemId(),1);
+        assertEquals(solutions.getUserId(),1);
+        assertEquals(solutions.getScore(),10);
     }
 }
