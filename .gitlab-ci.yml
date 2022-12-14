@@ -11,7 +11,7 @@ build:
     - ./mvnw package
   artifacts:
     paths:
-      - target/BrighterSpace-0.0.1-SNAPSHOT.jar
+      - target/AutoGrad-0.0.1-SNAPSHOT.jar
 
 test:
   stage: test
