@@ -9,10 +9,20 @@ import java.util.List;
 public class ProblemDAOMock implements IProblemDAO {
     @Override
     public Problem addProblem(Problem problem) {
-        return null;
+        Problem problem1 = new Problem(
+                1,
+                "Palindrome",
+                "Palindrome",
+                16.0f,
+                2,
+                "hard",
+                "numerical",
+                1
+        );
+        return problem1;
     }
 
-//    @Override
+    @Override
     public List<Problem> getAllProblem() {
         List<Problem> problemList = new ArrayList<>();
         Problem prob1 = new Problem(
@@ -22,7 +32,7 @@ public class ProblemDAOMock implements IProblemDAO {
                 5.0f,
                 5,
                 "easy",
-                "numnerical",
+                "numerical",
                 1
         );
         Problem prob2 = new Problem(
@@ -32,29 +42,54 @@ public class ProblemDAOMock implements IProblemDAO {
                 10.0f,
                 2,
                 "mediocre",
-                "numnerical",
+                "numerical",
                 1
         );
-
         problemList.add(prob1);
         problemList.add(prob2);
-
         return problemList;
     }
 
     @Override
     public Problem getProblemById(int problemId) {
-        Problem prob1 = new Problem();
-        return null;
-    }
-
-    @Override
-    public List<Problem> getAllProblems() {
-        return null;
+        Problem prob1 = new Problem(
+                1,
+                "Add",
+                "Addition",
+                6.0f,
+                2,
+                "easy",
+                "numerical",
+                1
+        );
+        return prob1;
     }
 
     @Override
     public List<Problem> getAllProblemByUser(int userId) {
-        return null;
+        List<Problem> probListUser = new ArrayList<>();
+        Problem prob1 = new Problem(
+                1,
+                "Subtract",
+                "Subtraction",
+                7.0f,
+                3,
+                "mediocre",
+                "numerical",
+                1
+        );
+        Problem prob2 = new Problem(
+                1,
+                "integration",
+                "integration",
+                17.0f,
+                3,
+                "hard",
+                "numerical",
+                1
+        );
+        probListUser.add(prob1);
+        probListUser.add(prob2);
+        return probListUser;
     }
 }

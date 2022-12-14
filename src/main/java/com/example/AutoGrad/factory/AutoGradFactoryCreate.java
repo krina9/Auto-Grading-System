@@ -1,9 +1,8 @@
 package com.example.AutoGrad.factory;
 
-import com.example.AutoGrad.factory.impl.ProblemDAOFactory;
-import com.example.AutoGrad.factory.impl.ProblemDAOMockFactory;
-import com.example.AutoGrad.factory.impl.SolutionDAOFactory;
-import com.example.AutoGrad.factory.impl.TestCaseDAOFactory;
+import com.example.AutoGrad.dataLayer.dao.ProblemDAO;
+import com.example.AutoGrad.dataLayer.mock.implementation.ProblemDAOMock;
+import com.example.AutoGrad.factory.impl.*;
 
 public class AutoGradFactoryCreate {
     public ProblemDAOFactory getProblemFactory()
@@ -21,5 +20,9 @@ public class AutoGradFactoryCreate {
 
     public ProblemDAOMockFactory getProblemDAOMockFactory() {
         return new ProblemDAOMockFactory();
+    }
+
+    public SolutionDAOMockFactory getSolutionDAOMockFactory() {
+        return new SolutionDAOMockFactory();
     }
 }

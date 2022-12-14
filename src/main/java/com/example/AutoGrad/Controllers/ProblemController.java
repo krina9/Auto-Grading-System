@@ -16,7 +16,7 @@ public class ProblemController {
 //    IProblem problemService = new Problem();
     private ProblemDAO problemDAO = new ProblemDAO();
     @Lazy
-    private IProblem problemService = new Problem(problemDAO);
+    private IProblem problemService = new Problem((IProblemDAO) problemDAO);
 
     @GetMapping("/api/user/{userId}/problem/list")
     public ResponseEntity getAllProblemsByUser(@PathVariable("userId") int userId) {

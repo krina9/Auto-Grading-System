@@ -28,6 +28,14 @@ public class User implements IUser, IAuthentication {
     public User(){
 
     }
+    public User(Integer userid, String fname, String lname, String email, String password, Authority role) {
+        this.userId = userid;
+        this.firstName = fname;
+        this.lastName = lname;
+        this.email = email;
+        this.password = password;
+        this.role = role;
+    }
 
     public User(UserDAO userDAO) {
         this.userDAO = userDAO;

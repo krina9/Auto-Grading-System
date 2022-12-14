@@ -16,14 +16,14 @@ public class Problem implements IProblem {
     private String difficulty;
     private String category;
     private Integer userId;
-    private ProblemDAO problemDAO;
+    private IProblemDAO problemDAO;
 
 //    public Problem(IProblemDAO problemDAO){
 //        this.problemDAO=problemDAO;
 //    }
 
 
-    public Problem(ProblemDAO problemDAO) {
+    public Problem(IProblemDAO problemDAO) {
         this.problemDAO = problemDAO;
     }
 

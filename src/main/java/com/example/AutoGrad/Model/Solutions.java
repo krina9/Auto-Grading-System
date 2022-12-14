@@ -5,6 +5,7 @@ import com.example.AutoGrad.dataLayer.dao.ProblemDAO;
 import com.example.AutoGrad.dataLayer.dao.SolutionDAO;
 import com.example.AutoGrad.dataLayer.dao.TestCaseDAO;
 import com.example.AutoGrad.dataLayer.dao.UserDAO;
+import com.example.AutoGrad.dataLayer.mock.ISolutionDAO;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.web.multipart.MultipartFile;
@@ -36,7 +37,7 @@ public class Solutions implements ISolutions {
     private int problemId;
     private int userId;
 
-    private SolutionDAO solutionDAO;
+    private ISolutionDAO solutionDAO;
 
     private UserDAO userDAO = new UserDAO();
 
@@ -44,11 +45,24 @@ public class Solutions implements ISolutions {
 
     private TestCaseDAO testCaseDAO = new TestCaseDAO();
 
-    public Solutions() {
+    public Solutions(Integer solutionId, Integer testCasesPassed, Integer testCasesFailed, double score, Date solutionSubmittedOn,Blob solution, Integer problemId,Integer userId)
+    {
+            this.solutionId = solutionId;
+            this.testCasesPassed = testCasesPassed;
+            this.testCasesFailed = testCasesFailed;
+            this.score = score;
+            this.solutionSubmittedOn = solutionSubmittedOn;
+            this.solution = solution;
+            this.problemId = problemId;
+            this.userId = userId;
     }
 
-    public Solutions(SolutionDAO solutionDAO) {
+    public Solutions(ISolutionDAO solutionDAO) {
         this.solutionDAO = solutionDAO;
+    }
+
+    public Solutions() {
+
     }
 
     @Override
