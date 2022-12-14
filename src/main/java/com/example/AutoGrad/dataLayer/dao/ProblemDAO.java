@@ -2,7 +2,7 @@ package com.example.AutoGrad.dataLayer.dao;
 
 import com.example.AutoGrad.Model.Problem;
 import com.example.AutoGrad.Model.User;
-import com.example.AutoGrad.dataLayer.IUser;
+import com.example.AutoGrad.dataLayer.mock.IProblemDAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProblemDAO {
+public class ProblemDAO implements IProblemDAO {
 
     private Connection connection = com.example.AutoGrad.Services.Connection.getInstance();
 
@@ -43,12 +43,13 @@ public class ProblemDAO {
         }
     }
 
-    public List<Problem> getAllProblem() {
-        try {
+    @Override
+    public List<Problem> getAllProblems() {
+        try{
             PreparedStatement statement = connection.prepareStatement("{CALL getAllProblems()}");
             ResultSet resultSet = statement.executeQuery();
             return makeProblemListFromResultSet(resultSet);
-        } catch (Exception e) {
+        } catch (Exception e){
             e.printStackTrace();
             return null;
         }

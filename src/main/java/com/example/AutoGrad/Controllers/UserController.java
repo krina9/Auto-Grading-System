@@ -5,7 +5,6 @@ import com.example.AutoGrad.Model.dto.ChangePasswordDTO;
 import com.example.AutoGrad.Model.dto.UserDTO;
 import com.example.AutoGrad.dataLayer.IUser;
 import com.example.AutoGrad.dataLayer.dao.UserDAO;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

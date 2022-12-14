@@ -52,7 +52,7 @@ class StudentDashboard extends React.Component {
                 <div className="space">
                 </div>
                 <br/>
-                <Link to="#">
+                <Link to="/login">
                     <button type="button">
                         Sign out
                     </button>

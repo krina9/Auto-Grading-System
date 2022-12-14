@@ -124,7 +124,7 @@ class AddProblem extends Component {
                                                   onChange={this.handleChange} />
                                 </Form.Group>
                                 <br/><button type="submit" >Next</button>
-                                <button >Cancel</button>
+                                <Link to="/InstructorDashboard"><button >Back</button></Link>
                             </form>
                         </div>
                     </div>

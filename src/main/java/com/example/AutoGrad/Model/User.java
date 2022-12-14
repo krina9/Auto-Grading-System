@@ -36,9 +36,9 @@ public class User implements IUser, IAuthentication {
         this.firstName = userDTO.getFirstName();
         this.lastName = userDTO.getLastName();
         this.email = userDTO.getEmail();
-        this.role = userDTO.getRole();
         this.password = userDTO.getPassword();
         this.isActivated = false;
+        this.role = userDTO.getRole();
     }
 
     @Override

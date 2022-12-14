@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import backend_url from "../services/api";
 import { Form } from 'react-bootstrap'
+import {Link} from "react-router-dom";
 class Solution extends React.Component {
     constructor(props) {
         super(props);
@@ -40,6 +41,9 @@ class Solution extends React.Component {
                 if (response.status === 200) {
                     console.log(response.data);
                 }
+            }, (err) =>
+            {
+                alert("Successful");
             }
         )
     }
@@ -70,7 +74,7 @@ class Solution extends React.Component {
                     <button type="submit" value="Submit" >Submit</button>
                     <div className="space">
                     </div>
-                    <button type="submit" value="Submit" >Cancel</button>
+                   <Link to="/listproblems"> <button type="submit" value="Submit" >Back</button></Link>
                 </Form.Group>
             </form>
         );

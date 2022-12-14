@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import backend_url from "../services/api";
 import InstructorProfile from "./InstructorProfile";
+import {Link} from "react-router-dom";
 class InstructorPwdChange extends React.Component {
     constructor(props) {
         super(props);
@@ -51,6 +52,7 @@ class InstructorPwdChange extends React.Component {
                 <div className="space">
                 </div>
                 <button type="submit" value="Submit" >Submit</button>
+                <Link to = "/InstructorDashboard"><button type ="submit">Back</button></Link>
             </form>
         );
     }

@@ -4,7 +4,6 @@ import com.example.AutoGrad.Model.Solutions;
 import com.example.AutoGrad.dataLayer.ISolutions;
 import com.example.AutoGrad.dataLayer.dao.SolutionDAO;
 import com.example.AutoGrad.factory.AutoGradFactoryCreate;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;

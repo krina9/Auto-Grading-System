@@ -2,7 +2,6 @@ package com.example.AutoGrad.Controllers;
 
 import com.example.AutoGrad.Model.User;
 import com.example.AutoGrad.dataLayer.IAuthentication;
-import com.example.AutoGrad.Model.dto.ChangePasswordDTO;
 import com.example.AutoGrad.Model.dto.LoginDTO;
 import com.example.AutoGrad.Model.dto.UserDTO;
 import com.example.AutoGrad.dataLayer.IUser;

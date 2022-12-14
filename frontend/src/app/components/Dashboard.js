@@ -36,10 +36,7 @@ class Dashboard extends React.Component {
                 <Link to = "/InstructorProfile"><button type="submit">Profile Settings</button></Link>
                 <div className="space">
                 </div>
-                <button type="submit">Add Questions</button>
-                <div className="space">
-                </div>
-                <label>Number of problems added : 0</label>
+                <Link to="/AddProblem"><button type="submit">Add Questions</button></Link>
                 <div className="space">
                 </div>
                 <Link to= "/login"><button type="submit">Sign out</button></Link>

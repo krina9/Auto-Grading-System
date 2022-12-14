@@ -71,6 +71,11 @@ class StudentProfile extends React.Component {
                       Update Password
                  </button>
             </Link>
+            <Link to="/studentDashboard">
+                <button type="button">
+                    Back
+                </button>
+            </Link>
         </React.Fragment>
         );
     }

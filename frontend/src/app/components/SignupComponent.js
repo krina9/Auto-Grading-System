@@ -32,7 +32,7 @@ class SignupComponent extends React.Component{
         console.log(this.state);
         axios.post(backend_url + "/signup", this.state).then(
             (response) => {
-                console.log(response);
+                alert("Activation email sent successfully");
             }
         )
     }

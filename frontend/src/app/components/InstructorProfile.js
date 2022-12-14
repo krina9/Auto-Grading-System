@@ -59,6 +59,7 @@ class InstructorProfile extends React.Component {
                 <div className="space">
                 </div>
                 <Link to = "/InstructorPwd"><button type ="submit">Change Password</button></Link>
+                <Link to = "/InstructorDashboard"><button type ="submit">Back</button></Link>
             </form>
         );
     }

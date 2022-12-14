@@ -11,7 +11,6 @@ import com.example.AutoGrad.Services.Impl.Utilities;
 import com.example.AutoGrad.Model.dto.LoginDTO;
 import com.example.AutoGrad.Model.dto.UserDTO;
 import org.springframework.context.annotation.Lazy;
-import org.springframework.http.ResponseEntity;
 
 import java.sql.*;
 

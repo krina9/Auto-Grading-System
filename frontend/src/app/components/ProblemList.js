@@ -2,7 +2,7 @@ import React, { Component, useState } from 'react'
 import { Dropdown } from "react-bootstrap";
 
 import {  Button, Modal, Form } from 'react-bootstrap';
-import {Navigate } from "react-router-dom";
+import {Link, Navigate} from "react-router-dom";
 import backend_url from '../services/api'
 import axios from 'axios';
 import Problem from "./Problem";
@@ -45,7 +45,7 @@ class ProblemList extends Component {
         const {problems} = this.state
         return (
             <div className="row">
-                <div className="col-lg-8 grid-margin strech-card">
+                <div >
                     {
                         problems.length ?
                             problems.map(problem =>
@@ -53,6 +53,8 @@ class ProblemList extends Component {
                             ):null
                     }
                 </div>
+                <Link to= "/Solution"><button>solve</button> </Link>
+                <Link to= "/StudentLearning"><button>Back</button> </Link>
             </div>
         )
     }
@@ -62,27 +64,29 @@ const ListItems = (props) => {
     return (
         <>
             <h4 className="card-title">{props.heading}</h4>
-            <ul className="list-inline">
+
                 {props.list.map((item, index) => {
                     return (
-                        <li>
-                            <div className="form-check">
-                                <label className="form-check-label">
+
+                            <div >
+                                <label >
                                     <input
                                         type="checkbox"
                                         checked={item.isChecked}
                                         onChange={() => {}}
-                                        className="form-check-input"
+
                                     />
-                                    <i className="input-helper"></i>
+
                                     {item.title}
                                 </label>
+
                             </div>
-                        </li>
+
                     );
                 })}
-            </ul>
+
         </>
+
     );
 };
 export default ProblemList;

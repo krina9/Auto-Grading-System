@@ -40,6 +40,8 @@ class LoginComponent extends React.Component {
                     }
 
                 }
+            }, (err) => {
+                alert("Something went wrong");
             }
         )
     }
@@ -73,7 +75,7 @@ class LoginComponent extends React.Component {
                         />
                     </label>
                     <button type="submit">log In</button>
-                    <Link to= "/"><button type="submit">Signup?</button></Link>
+                    <Link to= "/signup"><button type="submit">Signup?</button></Link>
                 </form>
             </div>
         );

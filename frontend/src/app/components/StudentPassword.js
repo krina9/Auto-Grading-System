@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import backend_url from "../services/api";
 import * as PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 
 class StudentPassword extends React.Component {
     constructor(props) {
@@ -56,6 +57,7 @@ class StudentPassword extends React.Component {
                 </div>
                 <br/>
                 <button type="submit" value="Update Password" >Update</button>
+                <Link to="/StudentProfile"><button type="submit" value="Update Password" >Back</button></Link>
             </form>
         </React.Fragment>
         );

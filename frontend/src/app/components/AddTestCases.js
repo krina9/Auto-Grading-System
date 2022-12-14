@@ -2,6 +2,7 @@ import {Component} from "react";
 import { Form } from 'react-bootstrap';
 import backend_url from '../services/api'
 import axios from 'axios'
+import {Link} from "react-router-dom";
 
 class AddTestCases extends Component {
     constructor() {
@@ -103,7 +104,7 @@ class AddTestCases extends Component {
                             <form className="forms-sample" onSubmit={this.addTestCases}>
                                 {forms}
                                 <button type="submit" className="btn btn-gradient-primary mr-2" >Submit</button>
-                                <button className="btn btn-light">Cancel</button>
+                               <Link to = "/AddProblem"> <button className="btn btn-light">Back</button></Link>
                             </form>
                         </div>
                     </div>

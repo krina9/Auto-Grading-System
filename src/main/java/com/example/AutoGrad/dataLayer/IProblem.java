@@ -8,9 +8,9 @@ public interface IProblem {
 
     Problem addProblem(Problem problem);
 
-    List<Problem> getAllProblem();
-
     Problem getProblemById(int problemId);
 
     List<Problem> getAllProblemByUser(int userId);
+
+    List<Problem> getAllProblems(int bugFix);
 }

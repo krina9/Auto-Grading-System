@@ -65,9 +65,14 @@ class StudentLearning extends React.Component {
                         </tr>
                     </tbody>
                 </table>
-                <Link to="#">
+                <Link to="/listproblems">
                     <button type="button">
                         Start Solving
+                    </button>
+                </Link>
+                <Link to="/studentDashboard">
+                    <button type="button">
+                        Back
                     </button>
                 </Link>
             </div>
