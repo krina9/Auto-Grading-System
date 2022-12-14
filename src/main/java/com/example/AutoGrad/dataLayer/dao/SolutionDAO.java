@@ -1,6 +1,7 @@
 package com.example.AutoGrad.dataLayer.dao;
 
 import com.example.AutoGrad.Model.Solutions;
+import com.example.AutoGrad.dataLayer.mock.ISolutionDAO;
 import org.springframework.context.annotation.Lazy;
 
 import java.sql.Connection;
@@ -9,7 +10,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SolutionDAO {
+public class SolutionDAO implements ISolutionDAO {
 
     @Lazy
     private Connection connection = com.example.AutoGrad.Services.Connection.getInstance();

@@ -2,6 +2,7 @@ package com.example.AutoGrad.Model;
 
 import com.example.AutoGrad.dataLayer.IProblem;
 import com.example.AutoGrad.dataLayer.dao.ProblemDAO;
+import com.example.AutoGrad.dataLayer.mock.IProblemDAO;
 
 import java.util.List;
 
@@ -15,14 +16,20 @@ public class Problem implements IProblem {
     private String difficulty;
     private String category;
     private Integer userId;
-    private ProblemDAO problemDAO;
+    private IProblemDAO problemDAO;
 
+//    public Problem(IProblemDAO problemDAO){
+//        this.problemDAO=problemDAO;
+//    }
+
+
+    public Problem(IProblemDAO problemDAO) {
+        this.problemDAO = problemDAO;
+    }
     public Problem() {
     }
 
-    public Problem(ProblemDAO problemDAO) {
-        this.problemDAO = problemDAO;
-    }
+
 
     public String getTitle() {
         return title;
@@ -88,7 +95,20 @@ public class Problem implements IProblem {
         this.userId = userId;
     }
 
+    public IProblemDAO getProblemDAO(){
+        return problemDAO;
+    }
 
+    public Problem(Integer id, String title, String statement, Float score, Integer numOfTestCases, String difficulty, String category, Integer userId) {
+        this.id = id;
+        this.title = title;
+        this.statement = statement;
+        this.score = score;
+        this.numOfTestCases = numOfTestCases;
+        this.difficulty = difficulty;
+        this.category = category;
+        this.userId = userId;
+    }
 
     @Override
     public String toString() {
@@ -106,7 +126,6 @@ public class Problem implements IProblem {
     @Override
     public Problem addProblem(Problem problem) {
         Problem problemInDB = problemDAO.addProblem(problem);
-        System.out.printf("HELLO");
         return problemInDB;
     }
 

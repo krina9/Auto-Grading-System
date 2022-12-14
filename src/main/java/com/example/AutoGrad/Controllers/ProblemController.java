@@ -3,6 +3,7 @@ package com.example.AutoGrad.Controllers;
 import com.example.AutoGrad.Model.Problem;
 import com.example.AutoGrad.dataLayer.IProblem;
 import com.example.AutoGrad.dataLayer.dao.ProblemDAO;
+import com.example.AutoGrad.dataLayer.mock.IProblemDAO;
 import com.example.AutoGrad.factory.AutoGradFactoryCreate;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +18,7 @@ public class ProblemController {
 //    IProblem problemService = new Problem();
     private ProblemDAO problemDAO = new ProblemDAO();
     @Lazy
-    private IProblem problemService = new Problem(problemDAO);
+    private IProblem problemService = new Problem((IProblemDAO) problemDAO);
 
 //    @GetMapping("/api/user/{userId}/problem/list")
 //    public ResponseEntity getAllProblemsByUser(@PathVariable("userId") int userId) {
