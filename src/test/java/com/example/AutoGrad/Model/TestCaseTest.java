@@ -11,17 +11,24 @@ public class TestCaseTest{
     @Test
     public void addTestCaseTest(){
        TestCases testCase1 = new TestCases();
-       testCase1.setInput("1 2");
-       testCase1.setOutput("3");
+       testCase1.setInput("2 2");
+       testCase1.setOutput("4");
+       testCase1.setProblemId(1);
        TestCases testCase2 = new TestCases();
        testCase2.setInput("3 4");
        testCase2.setOutput("7");
+       testCase2.setProblemId(1);
        List<TestCases> testCases = new ArrayList<>();
        testCases.add(testCase1);
        testCases.add(testCase2);
        List<TestCases> testCasesFromDB = testCasesServices.addTestCases(testCases);
-       assertEquals(testCasesFromDB.get(0), testCase1);
-       assertEquals(testCasesFromDB.get(1), testCase2);
+
+       TestCases testCases1FromDB = testCasesFromDB.get(0);
+       TestCases testCases2FromDB = testCasesFromDB.get(1);
+       assertEquals(testCases1FromDB.getInput(), testCase1.getInput());
+       assertEquals(testCases1FromDB.getOutput(), testCase1.getOutput());
+       assertEquals(testCases2FromDB.getInput(), testCase2.getInput());
+       assertEquals(testCases2FromDB.getOutput(), testCase2.getOutput());
     }
 
     @Test

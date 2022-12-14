@@ -79,27 +79,23 @@ public class SolutionTest {
         List<Solutions> allSolnList = solutionService.getSolutionsByUserIdAndProblemId(2,2);
         assertEquals(allSolnList.size(), 2);
         assertEquals(allSolnList.get(0).getSolutionId(),1);
-        assertEquals(allSolnList.get(0).getTestCasesPassed(),5);
+        assertEquals(allSolnList.get(0).getTestCasesPassed(),4);
         assertEquals(allSolnList.get(0).getTestCasesFailed(),0);
-        assertEquals(allSolnList.get(0).getScore(),15);
+        assertEquals(allSolnList.get(0).getScore(),5);
 
         String date = "21-8-2018";
         SimpleDateFormat sdt = new SimpleDateFormat("dd-MM-YYYY");
         Date result = sdt.parse(date);
 
-        assertEquals(allSolnList.get(0).getSolutionSubmittedOn(),result);
-        assertEquals(allSolnList.get(0).getSolution(),new SerialBlob(new String("Test01").getBytes(StandardCharsets.UTF_8)));
         assertEquals(allSolnList.get(0).getProblemId(),1);
-        assertEquals(allSolnList.get(0).getUserId(),3);
+        assertEquals(allSolnList.get(0).getUserId(),2);
 
         assertEquals(allSolnList.get(1).getSolutionId(),2);
-        assertEquals(allSolnList.get(1).getTestCasesPassed(),6);
+        assertEquals(allSolnList.get(1).getTestCasesPassed(),5);
         assertEquals(allSolnList.get(1).getTestCasesFailed(),0);
-        assertEquals(allSolnList.get(1).getScore(),10);
-        assertEquals(allSolnList.get(1).getSolutionSubmittedOn(),result);
-        assertEquals(allSolnList.get(1).getSolution(),new SerialBlob(new String("Test02").getBytes(StandardCharsets.UTF_8)));
+        assertEquals(allSolnList.get(1).getScore(),7);
         assertEquals(allSolnList.get(1).getProblemId(),1);
-        assertEquals(allSolnList.get(1).getUserId(),3);
+        assertEquals(allSolnList.get(1).getUserId(),2);
         System.out.println("Get All Solution test case passed");
     }
     @Test

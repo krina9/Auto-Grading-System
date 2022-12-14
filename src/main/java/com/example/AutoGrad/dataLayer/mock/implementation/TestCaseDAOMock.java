@@ -9,7 +9,7 @@ public class TestCaseDAOMock implements ITestCaseDAO {
     public List<TestCases> addTestCases(List<TestCases> testCases) {
        List<TestCases> testCasesList = new ArrayList<>();
        TestCases test1 = new TestCases("2 2","4",1);
-       TestCases test2=new TestCases("3 3","6",1);
+       TestCases test2=new TestCases("3 4","7",1);
        testCasesList.add(test1);
        testCasesList.add(test2);
        return testCasesList;

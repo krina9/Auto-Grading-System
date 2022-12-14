@@ -58,12 +58,12 @@ public class UserTest  {
     @Test
     public void getScoreByUserIdTest(){
         Solutions solutions = new Solutions();
-        assertEquals(solutions.getScore(),10);
+        assertEquals(solutions.getScore(),0.0);
     }
 
     @Test
     public void getNoOfProblemSolvedTest() {
-        assertEquals(userServices.getScoreByUserId(1), 5);
+        assertEquals(userServices.getScoreByUserId(1), 10.0);
     }
 
 }
