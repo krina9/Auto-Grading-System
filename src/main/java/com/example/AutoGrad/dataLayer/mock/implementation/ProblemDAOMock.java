@@ -23,7 +23,7 @@ public class ProblemDAOMock implements IProblemDAO {
     }
 
     @Override
-    public List<Problem> getAllProblem() {
+    public List<Problem> getAllProblems() {
         List<Problem> problemList = new ArrayList<>();
         Problem prob1 = new Problem(
                 1,

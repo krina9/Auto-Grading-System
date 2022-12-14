@@ -31,7 +31,7 @@ public class ProblemTest {
     }
     @Test
     public void getAllProblemsTest(){
-        List<Problem> problemList = problemService.getAllProblem();
+        List<Problem> problemList = problemService.getAllProblems(1);
         assertEquals(problemList.size(), 2);
         assertEquals(problemList.get(0).getId(), 1);
         assertEquals(problemList.get(0).getTitle(), "Test Problem");

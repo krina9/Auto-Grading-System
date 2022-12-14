@@ -41,9 +41,6 @@ class Solution extends React.Component {
                 if (response.status === 200) {
                     console.log(response.data);
                 }
-            }, (err) =>
-            {
-                alert("Successful");
             }
         )
     }
