@@ -3,7 +3,6 @@ package com.example.AutoGrad.Model;
 import com.example.AutoGrad.dataLayer.ISolutions;
 import com.example.AutoGrad.factory.AutoGradFactoryCreate;
 import org.junit.jupiter.api.Test;
-
 import javax.sql.rowset.serial.SerialBlob;
 import java.nio.charset.StandardCharsets;
 import java.sql.SQLException;
@@ -11,7 +10,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SolutionTest {

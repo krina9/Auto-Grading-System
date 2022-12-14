@@ -2,9 +2,6 @@ import React from "react";
 import axios from "axios";
 import backend_url from "../services/api";
 import {Link, Navigate, Route, Routes} from "react-router-dom";
-import {useNavigate} from "react-router-dom";
-import {RedirectFunction} from "react-router-dom";
-
 class LoginComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -38,14 +35,12 @@ class LoginComponent extends React.Component {
                         this.setState({ redirect: "/InstructorDashboard" });
 
                     }
-
                 }
             }, (err) => {
                 alert("Something went wrong");
             }
         )
     }
-
     render() {
         if (this.state.redirect) {
             return <Navigate to={this.state.redirect} />

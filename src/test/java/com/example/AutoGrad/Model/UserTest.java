@@ -1,9 +1,7 @@
 package com.example.AutoGrad.Model;
 
 import com.example.AutoGrad.Model.dto.UserDTO;
-import com.example.AutoGrad.dataLayer.ITestCases;
 import com.example.AutoGrad.dataLayer.IUser;
-import com.example.AutoGrad.factory.AbstractFactoryDAOMock;
 import com.example.AutoGrad.factory.AutoGradFactoryCreate;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;

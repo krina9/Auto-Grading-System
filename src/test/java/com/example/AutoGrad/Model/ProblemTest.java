@@ -1,13 +1,9 @@
 package com.example.AutoGrad.Model;
 
 import com.example.AutoGrad.dataLayer.IProblem;
-import com.example.AutoGrad.dataLayer.mock.IProblemDAO;
-import com.example.AutoGrad.dataLayer.mock.implementation.ProblemDAOMock;
 import com.example.AutoGrad.factory.AutoGradFactoryCreate;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ProblemTest {

@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 import backend_url from "../services/api";
-import InstructorProfile from "./InstructorProfile";
 import {Link} from "react-router-dom";
 class InstructorPwdChange extends React.Component {
     constructor(props) {
@@ -14,7 +13,6 @@ class InstructorPwdChange extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-
     handleChange(event) {
         event.preventDefault();
         const target = event.target;

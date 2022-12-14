@@ -24,8 +24,6 @@ class InstructorProfile extends React.Component {
             [target.name]: target.value,
         });
     }
-
-
     handleSubmit(event) {
         event.preventDefault();
         console.log(this.state);

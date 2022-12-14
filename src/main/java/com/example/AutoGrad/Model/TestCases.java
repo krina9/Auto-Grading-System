@@ -1,16 +1,12 @@
 package com.example.AutoGrad.Model;
 
 import com.example.AutoGrad.dataLayer.ITestCases;
-import com.example.AutoGrad.dataLayer.dao.TestCaseDAO;
 import com.example.AutoGrad.dataLayer.mock.ITestCaseDAO;
-import com.example.AutoGrad.dataLayer.mock.implementation.TestCaseDAOMock;
 
 import java.util.List;
 
 public class TestCases implements ITestCases {
-
     private int id;
-
     private String input;
 
     private String output;
@@ -18,6 +14,7 @@ public class TestCases implements ITestCases {
     private int problemId;
 
     private ITestCaseDAO testCaseDAO;
+
     public TestCases(String input, String output, int problemId) {
         this.input = input;
         this.output = output;

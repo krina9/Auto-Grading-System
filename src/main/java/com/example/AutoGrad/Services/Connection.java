@@ -3,9 +3,7 @@ package com.example.AutoGrad.Services;
 import java.sql.DriverManager;
 
 public class Connection {
-
     private static java.sql.Connection dbConnection = null;
-
     private Connection() {
         ;
     }

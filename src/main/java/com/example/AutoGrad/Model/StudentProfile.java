@@ -6,7 +6,6 @@ public class StudentProfile {
     private String email;
     private int score;
     private int numberOfProblemSolved;
-
     public StudentProfile(){
     }
 

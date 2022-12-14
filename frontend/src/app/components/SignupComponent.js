@@ -15,7 +15,6 @@ class SignupComponent extends React.Component{
         };
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-
     }
 
     handleInputChange(event){
@@ -24,9 +23,7 @@ class SignupComponent extends React.Component{
         this.setState({
             [target.name]: target.value,
         });
-
     }
-
     handleSubmit(event) {
         event.preventDefault();
         console.log(this.state);
@@ -36,7 +33,6 @@ class SignupComponent extends React.Component{
             }
         )
     }
-
     render() {
         return (
             <div>
@@ -91,9 +87,6 @@ class SignupComponent extends React.Component{
             </div>
         );
     }
-
-
-
 }
 
 export default SignupComponent;

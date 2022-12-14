@@ -3,7 +3,6 @@ import axios from "axios";
 import backend_url from "../services/api";
 import * as PropTypes from "prop-types";
 import {Link} from 'react-router-dom';
-
 class StudentLearning extends React.Component {
     constructor(props) {
         super(props);
@@ -14,7 +13,6 @@ class StudentLearning extends React.Component {
             email: '',
             password: ''
         };
-
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }

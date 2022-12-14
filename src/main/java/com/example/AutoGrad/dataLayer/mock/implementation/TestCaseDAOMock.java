@@ -1,16 +1,9 @@
 package com.example.AutoGrad.dataLayer.mock.implementation;
 
-import com.example.AutoGrad.Model.Solutions;
 import com.example.AutoGrad.Model.TestCases;
 import com.example.AutoGrad.dataLayer.mock.ITestCaseDAO;
-
-import javax.sql.rowset.serial.SerialBlob;
-import java.nio.charset.StandardCharsets;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-
 public class TestCaseDAOMock implements ITestCaseDAO {
     @Override
     public List<TestCases> addTestCases(List<TestCases> testCases) {
@@ -29,6 +22,5 @@ public class TestCaseDAOMock implements ITestCaseDAO {
         testCasesList1.add(test01);
         testCasesList1.add(test02);
         return testCasesList1;
-
     }
 }

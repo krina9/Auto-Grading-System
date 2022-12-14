@@ -14,7 +14,6 @@ public class MailService implements IMailService {
             mailSender = new JavaMailSenderImpl();
             mailSender.setHost("smtp.gmail.com");
             mailSender.setPort(587);
-
             mailSender.setUsername("trusha.shah123@gmail.com");
             mailSender.setPassword("sjfhxwljaczfeyoa");
             Properties props = mailSender.getJavaMailProperties();
@@ -32,7 +31,6 @@ public class MailService implements IMailService {
         message.setTo(email);
         message.setSubject("Autograd: Activation Required!");
         message.setText("To activate your account, please click here: " + "http://localhost:8080/api/confirm-account?token=" + token);
-
         mailSender.send(message);
     }
 
@@ -43,8 +41,6 @@ public class MailService implements IMailService {
         message.setTo(email);
         message.setSubject("Autograd welcomes you!");
         message.setText("Your account has been activated!");
-
-
         mailSender.send(message);
     }
 }

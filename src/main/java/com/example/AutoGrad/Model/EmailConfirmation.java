@@ -2,7 +2,6 @@ package com.example.AutoGrad.Model;
 
 import lombok.Getter;
 import lombok.Setter;
-
 import java.sql.Date;
 import java.util.UUID;
 

@@ -8,12 +8,10 @@ import com.example.AutoGrad.factory.AutoGradFactoryCreate;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 @RestController
 @CrossOrigin
 public class ProblemController {
     AutoGradFactoryCreate factory = new AutoGradFactoryCreate();
-//    IProblem problemService = new Problem();
     private ProblemDAO problemDAO = new ProblemDAO();
     @Lazy
     private IProblem problemService = new Problem((IProblemDAO) problemDAO);

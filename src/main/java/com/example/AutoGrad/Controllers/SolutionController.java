@@ -15,10 +15,7 @@ import java.util.List;
 public class SolutionController {
     AutoGradFactoryCreate factory = new AutoGradFactoryCreate();
     ISolutions solutionService = new Solutions(factory.getSolutionFactory().create());
-
     private SolutionDAO solutionDAO = new SolutionDAO();
-    //private ISolutions solutionService = new Solutions(solutionDAO);
-
     @PostMapping("/api/user/{userId}/problem/{problemId}/solve")
     public ResponseEntity solve(@RequestBody MultipartFile solution, @PathVariable int userId, @PathVariable int problemId) throws Exception {
         Solutions userSolution = solutionService.addSolution(userId, problemId, solution);
@@ -27,7 +24,6 @@ public class SolutionController {
         }
         return ResponseEntity.ok().body(userSolution);
     }
-
     @GetMapping("/api/user/{userId}/problem/{problemId}/solutions")
     public ResponseEntity getAllUserSolutions(@PathVariable int userId, @PathVariable int problemId) {
         List<Solutions> solutions = solutionService.getSolutionsByUserIdAndProblemId(userId, problemId);

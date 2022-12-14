@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 import backend_url from "../services/api";
-import * as PropTypes from "prop-types";
 import {Link} from 'react-router-dom';
 
 class StudentProfile extends React.Component {
@@ -57,10 +56,6 @@ class StudentProfile extends React.Component {
                 </div>
                 <br/>
                 <div>
-                <label>
-                    New Email:
-                    <input name="email" value={this.state.email} type="text" onChange={this.handleChange} />
-                </label>
                 </div>
                 <br/>
                 <button type="submit" value="Submit" >Update</button>

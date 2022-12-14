@@ -1,16 +1,9 @@
 import React, { Component, useState } from 'react'
-import { Dropdown } from "react-bootstrap";
-
-import {  Button, Modal, Form } from 'react-bootstrap';
 import {Link, Navigate} from "react-router-dom";
 import backend_url from '../services/api'
 import axios from 'axios';
 import Problem from "./Problem";
-
-
 class ProblemList extends Component {
-
-
     state = {
         problems: [],
         redirect: null,
@@ -25,7 +18,6 @@ class ProblemList extends Component {
             .catch(err =>{
                 console.log(err)
             })
-
     }
 
     changeBookmark = () => {
@@ -38,7 +30,6 @@ class ProblemList extends Component {
         this.setState({ridirect:"/ProblemToSolved"});
         this.setState({ redirect: "/addproblem" });
         this.setState(({ridirect: "/instructor"}))
-
     }
 
     render() {
@@ -59,15 +50,12 @@ class ProblemList extends Component {
         )
     }
 }
-
 const ListItems = (props) => {
     return (
         <>
             <h4 className="card-title">{props.heading}</h4>
-
                 {props.list.map((item, index) => {
                     return (
-
                             <div >
                                 <label >
                                     <input
@@ -79,14 +67,10 @@ const ListItems = (props) => {
 
                                     {item.title}
                                 </label>
-
                             </div>
-
                     );
                 })}
-
         </>
-
     );
 };
 export default ProblemList;

@@ -2,14 +2,12 @@ package com.example.AutoGrad.Model;
 
 import com.example.AutoGrad.dataLayer.ISolutions;
 import com.example.AutoGrad.dataLayer.dao.ProblemDAO;
-import com.example.AutoGrad.dataLayer.dao.SolutionDAO;
 import com.example.AutoGrad.dataLayer.dao.TestCaseDAO;
 import com.example.AutoGrad.dataLayer.dao.UserDAO;
 import com.example.AutoGrad.dataLayer.mock.ISolutionDAO;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.web.multipart.MultipartFile;
-
 import javax.sql.rowset.serial.SerialBlob;
 import java.io.BufferedReader;
 import java.io.File;
@@ -19,7 +17,6 @@ import java.nio.file.Files;
 import java.sql.Blob;
 import java.util.Date;
 import java.util.List;
-
 import static com.example.AutoGrad.others.Constants.OS;
 import static com.example.AutoGrad.others.Constants.SUBMISSIONS_FOLDER;
 import static java.lang.Thread.sleep;
@@ -106,7 +103,6 @@ public class Solutions implements ISolutions {
                         throw new Exception("Test cases not found");
 
                     File userSolution = new File(SUBMISSIONS_FOLDER + file.getOriginalFilename());
-//                    userSolution.createNewFile();
                     file.transferTo(userSolution);
                     sleep(5000);
                     Blob blob = new SerialBlob(Files.readAllBytes(userSolution.toPath()));

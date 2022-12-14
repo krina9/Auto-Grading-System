@@ -3,17 +3,10 @@ import axios from "axios";
 import backend_url from "../services/api";
 import * as PropTypes from "prop-types";
 import {Link} from "react-router-dom";
-import InstructorProfile from "./InstructorProfile";
 function Button(props) {
     return null;
 }
-
 Button.propTypes = {children: PropTypes.node};
-// const navigate = useNavigate();
-// const navigateToLogin = () => {
-//     navigate('/login')
-// }
-
 class Dashboard extends React.Component {
     constructor(props)
     {

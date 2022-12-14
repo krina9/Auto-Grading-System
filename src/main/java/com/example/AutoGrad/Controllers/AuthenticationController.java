@@ -12,13 +12,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @CrossOrigin
 public class AuthenticationController {
-
     UserDAO userDAO = new UserDAO();
-
     IAuthentication authenticationService = new User(userDAO);
-
     IUser userService = new User(userDAO);
-
     @GetMapping("/api/confirm-account")
     public ResponseEntity activate(@RequestParam("token") String token) {
         User user = authenticationService.activateAccount(token);
@@ -28,7 +24,6 @@ public class AuthenticationController {
             return ResponseEntity.notFound().build();
         }
     }
-
     @PostMapping("/api/signup")
     public ResponseEntity signup(@RequestBody UserDTO userDTO) {
         User user = userService.addUser(userDTO);
@@ -38,8 +33,6 @@ public class AuthenticationController {
             return ResponseEntity.internalServerError().build();
         }
     }
-
-
     @PostMapping("/api/login")
     public ResponseEntity login(@RequestBody LoginDTO credentials) {
         User user = authenticationService.login(credentials);
@@ -49,5 +42,4 @@ public class AuthenticationController {
             return ResponseEntity.badRequest().build();
         }
     }
-
 }

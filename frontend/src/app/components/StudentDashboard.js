@@ -7,13 +7,7 @@ import {Link} from 'react-router-dom';
 function Button(props) {
     return null;
 }
-
 Button.propTypes = {children: PropTypes.node};
-// const navigate = useNavigate();
-// const navigateToLogin = () => {
-//     navigate('/login')
-// }
-
 class StudentDashboard extends React.Component {
     constructor(props)
     {
@@ -61,7 +55,6 @@ class StudentDashboard extends React.Component {
         )
     }
     getUserInfo = function() {
-        //api/studentDashboard/{userId}  /api/user/{userId}
         axios.get(backend_url+`/user/${this.state.userId}`).then(
             (response) => {
                 this.setState({user :response.data});
@@ -69,8 +62,6 @@ class StudentDashboard extends React.Component {
                 console.log(error)
             }
         );
-
-        // /api/user/{userId}/get-problem-solved
         axios.get(backend_url+`/user/${this.state.userId}/get-problem-solved`).then(
             (response) => {
                 this.setState({noOfProblemSolved :response.data});
@@ -78,8 +69,6 @@ class StudentDashboard extends React.Component {
                 console.log(error)
             }
         );
-
-        // user/{userId}/get-score
         axios.get(backend_url+`/user/${this.state.userId}/get-score`).then(
             (response) => {
                 this.setState({score :response.data});
@@ -87,8 +76,6 @@ class StudentDashboard extends React.Component {
                 console.log(error)
             }
         );
-
     }
 }
-
 export default StudentDashboard;

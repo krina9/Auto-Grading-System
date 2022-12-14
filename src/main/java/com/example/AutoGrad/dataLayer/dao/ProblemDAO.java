@@ -2,11 +2,7 @@ package com.example.AutoGrad.dataLayer.dao;
 
 import com.example.AutoGrad.Model.Problem;
 import com.example.AutoGrad.Model.User;
-import com.example.AutoGrad.dataLayer.IProblem;
-import com.example.AutoGrad.dataLayer.IUser;
 import com.example.AutoGrad.dataLayer.mock.IProblemDAO;
-import com.example.AutoGrad.dataLayer.mock.IProblemDAO;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,12 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProblemDAO implements IProblemDAO {
-
     private Connection connection = com.example.AutoGrad.Services.Connection.getInstance();
-
     private UserDAO userDAO = new UserDAO();
-
-
     public Problem addProblem(Problem problem) {
         try {
             User user = userDAO.getUserById(problem.getUserId());
@@ -100,7 +92,6 @@ public class ProblemDAO implements IProblemDAO {
             problem.setDifficulty(resultSet.getString("difficulty"));
             problem.setCategory(resultSet.getString("category"));
             problem.setUserId(resultSet.getInt("user_id"));
-
             problems.add(problem);
         }
         return problems;

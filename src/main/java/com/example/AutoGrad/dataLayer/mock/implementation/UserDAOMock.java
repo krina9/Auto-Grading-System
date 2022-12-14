@@ -1,7 +1,6 @@
 package com.example.AutoGrad.dataLayer.mock.implementation;
 
 import com.example.AutoGrad.Model.Authority;
-import com.example.AutoGrad.Model.StudentProfile;
 import com.example.AutoGrad.Model.User;
 import com.example.AutoGrad.Model.dto.ChangePasswordDTO;
 import com.example.AutoGrad.Model.dto.LoginDTO;
@@ -14,7 +13,6 @@ public class UserDAOMock implements IUserDAO {
        User user = new User(1,"krina","mistry","krina@gmail.com","k123",Authority.STUDENT);
     return user;
     }
-
     @Override
     public User getUserById(int userId) {
         User user = new User(2,"ria","mistry","ria@gmail.com","r123",Authority.FACULTY);

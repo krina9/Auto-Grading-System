@@ -3,15 +3,12 @@ package com.example.AutoGrad.dataLayer.dao;
 import com.example.AutoGrad.Model.Solutions;
 import com.example.AutoGrad.dataLayer.mock.ISolutionDAO;
 import org.springframework.context.annotation.Lazy;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
 public class SolutionDAO implements ISolutionDAO {
-
     @Lazy
     private Connection connection = com.example.AutoGrad.Services.Connection.getInstance();
 
@@ -25,7 +22,6 @@ public class SolutionDAO implements ISolutionDAO {
             statement.setBlob(5, solution.getSolution());
             statement.setInt(6, solution.getProblemId());
             statement.setInt(7, solution.getUserId());
-
             statement.executeQuery();
             return solution;
         } catch (Exception e) {
@@ -33,7 +29,6 @@ public class SolutionDAO implements ISolutionDAO {
             return null;
         }
     }
-
     public List<Solutions> getAllSolutions() {
         try {
             PreparedStatement statement = connection.prepareStatement("{CALL getAllSolution()}");

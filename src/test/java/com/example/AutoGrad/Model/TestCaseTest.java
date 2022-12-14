@@ -1,16 +1,10 @@
 package com.example.AutoGrad.Model;
-
-import com.example.AutoGrad.dataLayer.ISolutions;
 import com.example.AutoGrad.dataLayer.ITestCases;
-import com.example.AutoGrad.dataLayer.mock.implementation.TestCaseDAOMock;
 import com.example.AutoGrad.factory.AutoGradFactoryCreate;
 import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class TestCaseTest{
     private AutoGradFactoryCreate factory = new AutoGradFactoryCreate();
     private ITestCases testCasesServices = new TestCases(factory.getTestCaseDAOMockFactory().create());
@@ -25,12 +19,9 @@ public class TestCaseTest{
        List<TestCases> testCases = new ArrayList<>();
        testCases.add(testCase1);
        testCases.add(testCase2);
-
        List<TestCases> testCasesFromDB = testCasesServices.addTestCases(testCases);
-
        assertEquals(testCasesFromDB.get(0), testCase1);
        assertEquals(testCasesFromDB.get(1), testCase2);
-
     }
 
     @Test

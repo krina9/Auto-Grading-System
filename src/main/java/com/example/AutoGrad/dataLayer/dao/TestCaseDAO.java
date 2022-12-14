@@ -1,22 +1,16 @@
 package com.example.AutoGrad.dataLayer.dao;
 
-import com.example.AutoGrad.Model.Solutions;
 import com.example.AutoGrad.Model.TestCases;
-import com.example.AutoGrad.dataLayer.mock.ISolutionDAO;
 import com.example.AutoGrad.dataLayer.mock.ITestCaseDAO;
 import org.springframework.context.annotation.Lazy;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
 public class TestCaseDAO implements ITestCaseDAO {
-
     @Lazy
     private Connection connection = com.example.AutoGrad.Services.Connection.getInstance();
-
     public List<TestCases> addTestCases(List<TestCases> testCases) {
         try {
             PreparedStatement statement;
@@ -33,7 +27,6 @@ public class TestCaseDAO implements ITestCaseDAO {
             return null;
         }
     }
-
     public List<TestCases> getAllTestCasesByProblemId(int problemId) {
         try {
             PreparedStatement statement = connection.prepareStatement("{CALL getAllTestCasesByProblemId(?)}");

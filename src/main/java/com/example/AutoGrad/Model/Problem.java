@@ -1,11 +1,8 @@
 package com.example.AutoGrad.Model;
 
 import com.example.AutoGrad.dataLayer.IProblem;
-import com.example.AutoGrad.dataLayer.dao.ProblemDAO;
 import com.example.AutoGrad.dataLayer.mock.IProblemDAO;
-
 import java.util.List;
-
 public class Problem implements IProblem {
 
     private Integer id;
@@ -17,12 +14,6 @@ public class Problem implements IProblem {
     private String category;
     private Integer userId;
     private IProblemDAO problemDAO;
-
-//    public Problem(IProblemDAO problemDAO){
-//        this.problemDAO=problemDAO;
-//    }
-
-
     public Problem(IProblemDAO problemDAO) {
         this.problemDAO = problemDAO;
     }

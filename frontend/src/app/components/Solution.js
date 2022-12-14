@@ -16,7 +16,6 @@ class Solution extends React.Component {
 
     }
     onFileChange = event => {
-
         // Update the state
         this.setState({ solution: event.target.files[0] });
 
@@ -46,10 +45,7 @@ class Solution extends React.Component {
     }
     handleFileChange = e => {
         e.preventDefault();
-        //console.log(e.target.files[0])
-        //console.log(typeof(e.target.files))
         this.setState({ solution : e.target.files[0] })
-        //console.log(this.state.solution)
     }
     render() {
         return (

@@ -12,18 +12,13 @@ import com.example.AutoGrad.Model.dto.LoginDTO;
 import com.example.AutoGrad.Model.dto.UserDTO;
 import com.example.AutoGrad.dataLayer.mock.IUserDAO;
 import org.springframework.context.annotation.Lazy;
-
 import java.sql.*;
 
 public class UserDAO implements IUserDAO {
-
     @Lazy
     private java.sql.Connection connection = Connection.getInstance();
-
     private IMailService mailService = new MailService();
-
     private Utilities passwordUtilities = new Utilities();
-
     public User getUserByEmail(String userEmail) {
         try {
             PreparedStatement statement = connection.prepareStatement("{CALL getUserByEmail(?)}");
@@ -36,7 +31,6 @@ public class UserDAO implements IUserDAO {
             return null;
         }
     }
-
     public User getUserById(int userId) {
         try {
             PreparedStatement statement = connection.prepareStatement("{CALL getUserById(?)}");
@@ -49,7 +43,6 @@ public class UserDAO implements IUserDAO {
             return null;
         }
     }
-
     private User makeUserFromResultSet(ResultSet resultSet) throws Exception {
         User user = null;
         if (resultSet.next()) {
@@ -66,7 +59,6 @@ public class UserDAO implements IUserDAO {
             return null;
         }
     }
-
     public double getScoreByUserId(int userId) {
         try {
             PreparedStatement statement = connection.prepareStatement("{CALL getScoreByUserId(?)}");
@@ -82,7 +74,6 @@ public class UserDAO implements IUserDAO {
             return -1;
         }
     }
-
     public void updateScoreByUserId(double score, int userId) {
         try {
             PreparedStatement statement = connection.prepareStatement("{CALL updateScoreByUserId(?, ?)}");
@@ -93,7 +84,6 @@ public class UserDAO implements IUserDAO {
             e.printStackTrace();
         }
     }
-
     public User addUser(UserDTO userDTO) {
         try {
 

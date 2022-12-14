@@ -3,14 +3,10 @@ import React, { Component } from 'react'
 import { Form } from 'react-bootstrap'
 import {Link, Navigate, Routes} from "react-router-dom"
 import backend_url from '../services/api'
-
-
 class AddProblem extends Component {
-
     constructor(props){
         super(props)
         this.state = {
-
             redirect: null,
             title:'',
             statement:'',
@@ -20,12 +16,9 @@ class AddProblem extends Component {
             difficulty:''
         };
     }
-
     handleChange = e => {
-        //console.log(e.target.name)
         this.setState({ [e.target.name]: e.target.value })
     }
-
     addTestCases = (e) =>{
         e.preventDefault();
         const formdata = new FormData();
@@ -36,7 +29,6 @@ class AddProblem extends Component {
         formdata.append("difficulty",this.state.difficulty)
         formdata.append("category",this.state.category)
         formdata.append("userId", localStorage.getItem("user_id"));
-
         axios.post(`${backend_url}/user/problem/add`,formdata).then(
             (response) => {
                 localStorage.setItem("problemId",response.data.id)
@@ -47,15 +39,12 @@ class AddProblem extends Component {
                 alert(err);
             }
         )
-
     }
     render() {
         if (this.state.redirect) {
             return <Navigate to={this.state.redirect} />
         }
-
         const {title,statement,numOfTestCases,difficulty,category,score}=this.state
-
         return (
             <div className="main-panel" style={{ marginTop: 20, marginLeft: 100 }}>
 
@@ -65,7 +54,6 @@ class AddProblem extends Component {
               <i className="mdi mdi-account-box"></i>
             </span>Add a problem</h3>
                 </div>
-
                 <div className="col-12 grid-margin stretch-card">
                     <div className="card">
                         <div className="card-body">
@@ -87,14 +75,6 @@ class AddProblem extends Component {
                                               onChange={this.handleChange}
                                     ></textarea>
                                 </Form.Group>
-                                {/*<Form.Group >*/}
-                                {/*    <br/>  <label>Solution File</label>*/}
-                                {/*    <div className="custom-file"  >*/}
-                                {/*        <Form.Control type="file" id="customFileLang1" lang="es"*/}
-                                {/*                      onChange={this.handleFileChange}/>*/}
-                                {/*        <label className="custom-file-label" htmlFor="customFileLang1">Upload solution file</label>*/}
-                                {/*    </div>*/}
-                                {/*</Form.Group>*/}
                                 <Form.Group>
                                     <br/><label>Maximum Score:</label>
                                     <Form.Control type="number"  placeholder="Maximum Score"
@@ -133,5 +113,4 @@ class AddProblem extends Component {
         )
     }
 }
-
     export default AddProblem;

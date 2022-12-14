@@ -2,10 +2,8 @@ package com.example.AutoGrad.dataLayer.mock.implementation;
 
 import com.example.AutoGrad.Model.Problem;
 import com.example.AutoGrad.dataLayer.mock.IProblemDAO;
-
 import java.util.ArrayList;
 import java.util.List;
-
 public class ProblemDAOMock implements IProblemDAO {
     @Override
     public Problem addProblem(Problem problem) {
@@ -21,7 +19,6 @@ public class ProblemDAOMock implements IProblemDAO {
         );
         return problem1;
     }
-
     @Override
     public List<Problem> getAllProblems() {
         List<Problem> problemList = new ArrayList<>();

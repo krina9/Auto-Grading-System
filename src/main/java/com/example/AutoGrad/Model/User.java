@@ -5,7 +5,6 @@ import com.example.AutoGrad.dataLayer.IAuthentication;
 import com.example.AutoGrad.Model.dto.LoginDTO;
 import com.example.AutoGrad.Model.dto.UserDTO;
 import com.example.AutoGrad.dataLayer.IUser;
-import com.example.AutoGrad.dataLayer.dao.UserDAO;
 import com.example.AutoGrad.dataLayer.mock.IUserDAO;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,9 +25,11 @@ public class User implements IUser, IAuthentication {
     private Boolean isActivated;
 
     private IUserDAO userDAO;
-    public User(){
+
+    public User() {
 
     }
+
     public User(Integer userid, String fname, String lname, String email, String password, Authority role) {
         this.userId = userid;
         this.firstName = fname;
@@ -41,6 +42,7 @@ public class User implements IUser, IAuthentication {
     public User(IUserDAO userDAO) {
         this.userDAO = userDAO;
     }
+
     public User(UserDTO userDTO) {
         this.firstName = userDTO.getFirstName();
         this.lastName = userDTO.getLastName();
@@ -79,7 +81,7 @@ public class User implements IUser, IAuthentication {
             } else {
                 return userDAO.addUser(userDTO);
             }
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
